@@ -6,15 +6,16 @@
 import * as calc from "./calculations.js";
 
 const C = {
-  gold:  "#f1c45a",
-  green: "#25d07f",
-  light: "#c3ccd8",
-  muted: "#7f8b9c",
-  grid:  "rgba(255,255,255,0.06)",
-  surface: "#12171f",
+  cyan:   "#2fe6e6",
+  violet: "#8e7bff",
+  green:  "#2bd57c",
+  light:  "#aebfd4",
+  muted:  "#69788f",
+  grid:   "rgba(120,200,255,0.07)",
+  surface: "#0a0e18",
 };
-// Vivid categorical set that reads well on near-black.
-const SERIES = ["#f1c45a", "#25d07f", "#5aa9ff", "#ef7d54", "#b98cff", "#19c6c6", "#ff6b9d", "#9bd64a"];
+// Vivid neon categorical set that reads well on space-dark.
+const SERIES = ["#2fe6e6", "#8e7bff", "#2bd57c", "#5aa9ff", "#ff7ac2", "#ffd166", "#ff7d54", "#9bd64a"];
 
 const charts = {};
 
@@ -66,7 +67,7 @@ export function renderGoalsByTeam(matches, teams) {
   const data = calc.goalsByTeam(matches, teams).filter((d) => d.goals_for > 0);
   render("chart-goals-team", {
     type: "bar",
-    data: { labels: data.map((d) => d.team), datasets: [{ data: data.map((d) => d.goals_for), backgroundColor: C.gold, borderRadius: 4, maxBarThickness: 34 }] },
+    data: { labels: data.map((d) => d.team), datasets: [{ data: data.map((d) => d.goals_for), backgroundColor: C.cyan, borderRadius: 4, maxBarThickness: 34 }] },
     options: baseOptions({ scales: vScales() }),
   });
 }
@@ -75,7 +76,7 @@ export function renderPointsByTeam(matches, teams) {
   const data = calc.pointsByTeam(matches, teams).filter((d) => d.points > 0);
   render("chart-points-team", {
     type: "bar",
-    data: { labels: data.map((d) => d.team), datasets: [{ data: data.map((d) => d.points), backgroundColor: C.green, borderRadius: 4, maxBarThickness: 34 }] },
+    data: { labels: data.map((d) => d.team), datasets: [{ data: data.map((d) => d.points), backgroundColor: C.violet, borderRadius: 4, maxBarThickness: 34 }] },
     options: baseOptions({ scales: vScales() }),
   });
 }
@@ -86,7 +87,7 @@ export function renderGoalsByGroup(matches) {
   const labels = Object.keys(obj).sort();
   render("chart-goals-group", {
     type: "bar",
-    data: { labels: labels.map((g) => "Grp " + g), datasets: [{ data: labels.map((g) => obj[g]), backgroundColor: C.gold, borderRadius: 4, maxBarThickness: 30 }] },
+    data: { labels: labels.map((g) => "Grp " + g), datasets: [{ data: labels.map((g) => obj[g]), backgroundColor: C.cyan, borderRadius: 4, maxBarThickness: 30 }] },
     options: baseOptions({ scales: vScales() }),
   });
 }
@@ -99,9 +100,9 @@ export function renderGoalsByDate(matches) {
       labels: data.map((d) => d.date),
       datasets: [{
         data: data.map((d) => d.goals),
-        borderColor: C.green,
-        backgroundColor: "rgba(37,208,127,.14)",
-        fill: true, tension: .35, pointRadius: 4, pointBackgroundColor: C.green, pointBorderColor: "#0c1017", borderWidth: 2.5,
+        borderColor: C.cyan,
+        backgroundColor: "rgba(47,230,230,.14)",
+        fill: true, tension: .35, pointRadius: 4, pointBackgroundColor: C.cyan, pointBorderColor: "#05070e", borderWidth: 2.5,
       }],
     },
     options: baseOptions({ scales: vScales() }),
@@ -124,7 +125,7 @@ export function renderTitlesByCountry(historical) {
   const labels = Object.keys(obj);
   render("chart-titles", {
     type: "bar",
-    data: { labels, datasets: [{ data: labels.map((c) => obj[c]), backgroundColor: C.gold, borderRadius: 4, maxBarThickness: 26 }] },
+    data: { labels, datasets: [{ data: labels.map((c) => obj[c]), backgroundColor: C.violet, borderRadius: 4, maxBarThickness: 26 }] },
     options: baseOptions({ indexAxis: "y", scales: hScales() }),
   });
 }
