@@ -7,24 +7,28 @@
   <meta name="description" content="Live statistics, results, standings and history for the FIFA World Cup 2026." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Hanken+Grotesk:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="assets/css/styles.css" />
   <!-- Chart.js via CDN (no build step required) -->
   <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js" defer></script>
 </head>
-<body>
-  <!-- ============================= HEADER ============================= -->
-  <header class="site-header">
-    <div class="container header-inner">
-      <div class="brand">
-        <span class="brand-mark" aria-hidden="true">⚽</span>
-        <div>
-          <h1>World Cup 2026 Dashboard</h1>
-          <p class="brand-sub">Canada · Mexico · United States</p>
-        </div>
-      </div>
-      <div class="header-meta">
-        <span id="data-status" class="data-status">Loading data…</span>
+<body id="top">
+  <!-- Atmosphere: glows + film grain, fixed behind everything -->
+  <div class="atmos" aria-hidden="true"></div>
+  <div class="grain" aria-hidden="true"></div>
+
+  <!-- ============================= MASTHEAD ============================= -->
+  <header class="masthead">
+    <div class="container masthead-inner">
+      <a class="brand" href="#top">
+        <span class="brand-badge" aria-hidden="true">26</span>
+        <span class="brand-text">
+          <span class="brand-title">FIFA <em>World Cup</em></span>
+          <span class="brand-sub">Live Tracker · Canada · Mexico · USA</span>
+        </span>
+      </a>
+      <div class="masthead-meta">
+        <span id="data-status" class="data-status">Loading…</span>
       </div>
     </div>
   </header>
