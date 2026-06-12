@@ -92,7 +92,10 @@ function byRanking(a, b) {
  * Returns an object keyed by group letter → sorted array of team rows.
  */
 export function computeStandings(matches, teams) {
-  const stats = computeTeamStats(matches, teams);
+  // Group tables count only group-stage results — knockout matches must not
+  // alter group standings.
+  const groupMatches = matches.filter((m) => /group/i.test(m.stage || ""));
+  const stats = computeTeamStats(groupMatches, teams);
   const groups = {};
   for (const row of stats.values()) {
     const g = row.group || "?";

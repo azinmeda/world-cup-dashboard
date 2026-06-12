@@ -30,13 +30,8 @@ function renderKPIs(matches) {
   const topScorer = calc.topScoringTeam(matches, teams);
   const bestDef = calc.bestDefensiveTeam(matches, teams);
   const highMatch = calc.highestScoringMatch(matches);
-  const leaders = calc.groupLeaders(matches, teams);
-  const venuesUsed = new Set(matches.map((m) => m.venue)).size;
+  const groupCount = new Set(teams.map((t) => t.group).filter(Boolean)).size;
   const hostCountries = [...new Set(data.venues.map((v) => v.country))];
-
-  const leaderText = Object.entries(leaders)
-    .map(([g, t]) => `${g}: ${t}`)
-    .join(" · ") || "—";
 
   const cards = [
     kpiCard("Total Matches", matches.length, `${completed} done · ${scheduled} upcoming`, ""),
@@ -50,9 +45,9 @@ function renderKPIs(matches) {
     kpiCard("Highest Scoring Match",
       highMatch ? `${highMatch.home_score + highMatch.away_score} goals` : "—",
       highMatch ? `${highMatch.home_team} ${highMatch.home_score}–${highMatch.away_score} ${highMatch.away_team}` : "—", ""),
-    kpiCard("Venues Used", venuesUsed, `of ${data.venues.length} stadiums`, ""),
+    kpiCard("Groups", groupCount, "of 4 teams each", ""),
     kpiCard("Host Countries", hostCountries.length, hostCountries.join(", "), "accent"),
-    kpiCard("Group Leaders", `${Object.keys(leaders).length}/4`, leaderText, "blue"),
+    kpiCard("Stadiums", data.venues.length, "across host nations", "blue"),
   ].join("");
 
   document.getElementById("kpi-grid").innerHTML = cards;

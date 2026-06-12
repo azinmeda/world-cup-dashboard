@@ -14,7 +14,8 @@ function flag(name) {
   return t && t.flag ? `<span class="flag">${t.flag}</span>` : "";
 }
 function teamCell(name) {
-  return `${flag(name)}${name ?? ""}`;
+  if (!name) return `<span class="tbd">TBD</span>`;
+  return `${flag(name)}${name}`;
 }
 const esc = (s) => String(s ?? "").replace(/[&<>"]/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
 

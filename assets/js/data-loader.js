@@ -55,9 +55,12 @@ export function validateData(matches, teams, venues) {
 
   for (const m of matches) {
     const id = m.match_id ?? "(no id)";
+    const complete = String(m.status).toLowerCase() === "complete";
+    const hasTeams = Boolean(m.home_team && m.away_team);
 
-    // Missing team names
-    if (!m.home_team || !m.away_team) {
+    // Missing team names — only an error for completed matches. Knockout
+    // fixtures are legitimately "TBD" until the bracket fills in.
+    if (complete && !hasTeams) {
       warnings.push(`Match ${id}: missing team name.`);
     }
 
@@ -83,14 +86,13 @@ export function validateData(matches, teams, venues) {
     }
 
     // Status / score consistency
-    const isComplete = String(m.status).toLowerCase() === "complete";
     const hasScores = m.home_score !== null && m.home_score !== undefined &&
       m.away_score !== null && m.away_score !== undefined;
 
-    if (isComplete && !hasScores) {
+    if (complete && !hasScores) {
       warnings.push(`Match ${id}: marked Complete but missing scores.`);
     }
-    if (!isComplete && hasScores) {
+    if (!complete && hasScores) {
       warnings.push(`Match ${id}: has scores but status is "${m.status}".`);
     }
 
@@ -104,12 +106,15 @@ export function validateData(matches, teams, venues) {
       warnings.push(`Match ${id}: venue "${m.venue}" not found in venues.json.`);
     }
 
-    // Duplicate fixtures (same two teams, same date)
-    const pairKey = [m.home_team, m.away_team, m.date].join("|");
-    if (seenPairs.has(pairKey)) {
-      warnings.push(`Match ${id}: possible duplicate fixture.`);
+    // Duplicate fixtures (same two teams, same date) — only checked once both
+    // teams are known, so TBD knockout slots aren't falsely flagged.
+    if (hasTeams) {
+      const pairKey = [m.home_team, m.away_team, m.date].join("|");
+      if (seenPairs.has(pairKey)) {
+        warnings.push(`Match ${id}: possible duplicate fixture.`);
+      }
+      seenPairs.add(pairKey);
     }
-    seenPairs.add(pairKey);
   }
 
   if (warnings.length) {
