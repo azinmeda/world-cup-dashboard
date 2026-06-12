@@ -1,0 +1,37 @@
+[
+  { "match_id": "001", "date": "2026-06-11", "time": "15:00", "stage": "Group Stage", "group": "A", "home_team": "Mexico", "away_team": "South Africa", "home_score": 2, "away_score": 0, "status": "Complete", "venue": "Estadio Azteca", "city": "Mexico City", "country": "Mexico" },
+  { "match_id": "002", "date": "2026-06-11", "time": "18:00", "stage": "Group Stage", "group": "A", "home_team": "Saudi Arabia", "away_team": "Uruguay", "home_score": 1, "away_score": 1, "status": "Complete", "venue": "Estadio Akron", "city": "Guadalajara", "country": "Mexico" },
+
+  { "match_id": "003", "date": "2026-06-12", "time": "15:00", "stage": "Group Stage", "group": "B", "home_team": "United States", "away_team": "England", "home_score": 1, "away_score": 2, "status": "Complete", "venue": "MetLife Stadium", "city": "East Rutherford", "country": "United States" },
+  { "match_id": "004", "date": "2026-06-12", "time": "18:00", "stage": "Group Stage", "group": "B", "home_team": "Japan", "away_team": "Senegal", "home_score": 0, "away_score": 0, "status": "Complete", "venue": "Gillette Stadium", "city": "Foxborough", "country": "United States" },
+
+  { "match_id": "005", "date": "2026-06-12", "time": "16:00", "stage": "Group Stage", "group": "C", "home_team": "Canada", "away_team": "France", "home_score": 0, "away_score": 3, "status": "Complete", "venue": "BMO Field", "city": "Toronto", "country": "Canada" },
+  { "match_id": "006", "date": "2026-06-13", "time": "19:00", "stage": "Group Stage", "group": "C", "home_team": "Croatia", "away_team": "South Korea", "home_score": 2, "away_score": 1, "status": "Complete", "venue": "BC Place", "city": "Vancouver", "country": "Canada" },
+
+  { "match_id": "007", "date": "2026-06-13", "time": "15:00", "stage": "Group Stage", "group": "D", "home_team": "Brazil", "away_team": "Australia", "home_score": 4, "away_score": 1, "status": "Complete", "venue": "SoFi Stadium", "city": "Inglewood", "country": "United States" },
+  { "match_id": "008", "date": "2026-06-13", "time": "18:00", "stage": "Group Stage", "group": "D", "home_team": "Germany", "away_team": "Morocco", "home_score": 2, "away_score": 2, "status": "Complete", "venue": "AT&T Stadium", "city": "Arlington", "country": "United States" },
+
+  { "match_id": "009", "date": "2026-06-15", "time": "15:00", "stage": "Group Stage", "group": "A", "home_team": "Mexico", "away_team": "Saudi Arabia", "home_score": 1, "away_score": 0, "status": "Complete", "venue": "Estadio Azteca", "city": "Mexico City", "country": "Mexico" },
+  { "match_id": "010", "date": "2026-06-15", "time": "18:00", "stage": "Group Stage", "group": "A", "home_team": "Uruguay", "away_team": "South Africa", "home_score": 3, "away_score": 1, "status": "Complete", "venue": "Estadio BBVA", "city": "Monterrey", "country": "Mexico" },
+
+  { "match_id": "011", "date": "2026-06-16", "time": "15:00", "stage": "Group Stage", "group": "B", "home_team": "United States", "away_team": "Japan", "home_score": 2, "away_score": 1, "status": "Complete", "venue": "Lincoln Financial Field", "city": "Philadelphia", "country": "United States" },
+  { "match_id": "012", "date": "2026-06-16", "time": "18:00", "stage": "Group Stage", "group": "B", "home_team": "England", "away_team": "Senegal", "home_score": 3, "away_score": 0, "status": "Complete", "venue": "Mercedes-Benz Stadium", "city": "Atlanta", "country": "United States" },
+
+  { "match_id": "013", "date": "2026-06-16", "time": "16:00", "stage": "Group Stage", "group": "C", "home_team": "France", "away_team": "Croatia", "home_score": 2, "away_score": 0, "status": "Complete", "venue": "Levi's Stadium", "city": "Santa Clara", "country": "United States" },
+  { "match_id": "014", "date": "2026-06-17", "time": "19:00", "stage": "Group Stage", "group": "C", "home_team": "South Korea", "away_team": "Canada", "home_score": 1, "away_score": 1, "status": "Complete", "venue": "BMO Field", "city": "Toronto", "country": "Canada" },
+
+  { "match_id": "015", "date": "2026-06-17", "time": "15:00", "stage": "Group Stage", "group": "D", "home_team": "Brazil", "away_team": "Germany", "home_score": 2, "away_score": 2, "status": "Complete", "venue": "Arrowhead Stadium", "city": "Kansas City", "country": "United States" },
+  { "match_id": "016", "date": "2026-06-17", "time": "18:00", "stage": "Group Stage", "group": "D", "home_team": "Morocco", "away_team": "Australia", "home_score": 1, "away_score": 0, "status": "Complete", "venue": "NRG Stadium", "city": "Houston", "country": "United States" },
+
+  { "match_id": "017", "date": "2026-06-20", "time": "15:00", "stage": "Group Stage", "group": "A", "home_team": "Mexico", "away_team": "Uruguay", "home_score": null, "away_score": null, "status": "Scheduled", "venue": "Estadio Azteca", "city": "Mexico City", "country": "Mexico" },
+  { "match_id": "018", "date": "2026-06-20", "time": "15:00", "stage": "Group Stage", "group": "A", "home_team": "South Africa", "away_team": "Saudi Arabia", "home_score": null, "away_score": null, "status": "Scheduled", "venue": "Estadio Akron", "city": "Guadalajara", "country": "Mexico" },
+
+  { "match_id": "019", "date": "2026-06-21", "time": "15:00", "stage": "Group Stage", "group": "B", "home_team": "United States", "away_team": "Senegal", "home_score": null, "away_score": null, "status": "Scheduled", "venue": "MetLife Stadium", "city": "East Rutherford", "country": "United States" },
+  { "match_id": "020", "date": "2026-06-21", "time": "15:00", "stage": "Group Stage", "group": "B", "home_team": "England", "away_team": "Japan", "home_score": null, "away_score": null, "status": "Scheduled", "venue": "Gillette Stadium", "city": "Foxborough", "country": "United States" },
+
+  { "match_id": "021", "date": "2026-06-21", "time": "18:00", "stage": "Group Stage", "group": "C", "home_team": "France", "away_team": "South Korea", "home_score": null, "away_score": null, "status": "Scheduled", "venue": "Levi's Stadium", "city": "Santa Clara", "country": "United States" },
+  { "match_id": "022", "date": "2026-06-21", "time": "18:00", "stage": "Group Stage", "group": "C", "home_team": "Croatia", "away_team": "Canada", "home_score": null, "away_score": null, "status": "Scheduled", "venue": "BC Place", "city": "Vancouver", "country": "Canada" },
+
+  { "match_id": "023", "date": "2026-06-22", "time": "15:00", "stage": "Group Stage", "group": "D", "home_team": "Brazil", "away_team": "Morocco", "home_score": null, "away_score": null, "status": "Scheduled", "venue": "SoFi Stadium", "city": "Inglewood", "country": "United States" },
+  { "match_id": "024", "date": "2026-06-22", "time": "15:00", "stage": "Group Stage", "group": "D", "home_team": "Germany", "away_team": "Australia", "home_score": null, "away_score": null, "status": "Scheduled", "venue": "AT&T Stadium", "city": "Arlington", "country": "United States" }
+]

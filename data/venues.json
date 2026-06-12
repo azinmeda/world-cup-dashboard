@@ -1,0 +1,16 @@
+[
+  { "venue_id": "AZT", "venue": "Estadio Azteca", "city": "Mexico City", "country": "Mexico", "capacity": 87523 },
+  { "venue_id": "AKR", "venue": "Estadio Akron", "city": "Guadalajara", "country": "Mexico", "capacity": 49850 },
+  { "venue_id": "BBVA", "venue": "Estadio BBVA", "city": "Monterrey", "country": "Mexico", "capacity": 53500 },
+  { "venue_id": "MET", "venue": "MetLife Stadium", "city": "East Rutherford", "country": "United States", "capacity": 82500 },
+  { "venue_id": "SOF", "venue": "SoFi Stadium", "city": "Inglewood", "country": "United States", "capacity": 70240 },
+  { "venue_id": "ATT", "venue": "AT&T Stadium", "city": "Arlington", "country": "United States", "capacity": 80000 },
+  { "venue_id": "MERC", "venue": "Mercedes-Benz Stadium", "city": "Atlanta", "country": "United States", "capacity": 71000 },
+  { "venue_id": "GIL", "venue": "Gillette Stadium", "city": "Foxborough", "country": "United States", "capacity": 65878 },
+  { "venue_id": "LIN", "venue": "Lincoln Financial Field", "city": "Philadelphia", "country": "United States", "capacity": 69596 },
+  { "venue_id": "LVL", "venue": "Levi's Stadium", "city": "Santa Clara", "country": "United States", "capacity": 68500 },
+  { "venue_id": "ARR", "venue": "Arrowhead Stadium", "city": "Kansas City", "country": "United States", "capacity": 76416 },
+  { "venue_id": "NRG", "venue": "NRG Stadium", "city": "Houston", "country": "United States", "capacity": 72220 },
+  { "venue_id": "BMO", "venue": "BMO Field", "city": "Toronto", "country": "Canada", "capacity": 45000 },
+  { "venue_id": "BCP", "venue": "BC Place", "city": "Vancouver", "country": "Canada", "capacity": 54500 }
+]

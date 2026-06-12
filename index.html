@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>FIFA World Cup 2026 — Dashboard</title>
+  <meta name="description" content="Live statistics, results, standings and history for the FIFA World Cup 2026." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/css/styles.css" />
+  <!-- Chart.js via CDN (no build step required) -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js" defer></script>
+</head>
+<body>
+  <!-- ============================= HEADER ============================= -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <div class="brand">
+        <span class="brand-mark" aria-hidden="true">⚽</span>
+        <div>
+          <h1>World Cup 2026 Dashboard</h1>
+          <p class="brand-sub">Canada · Mexico · United States</p>
+        </div>
+      </div>
+      <div class="header-meta">
+        <span id="data-status" class="data-status">Loading data…</span>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+
+    <!-- ====================== EXECUTIVE SUMMARY ====================== -->
+    <section id="summary" class="section">
+      <div class="section-head">
+        <h2>Executive Summary</h2>
+        <p class="section-sub">Tournament at a glance</p>
+      </div>
+      <div id="kpi-grid" class="kpi-grid"><!-- KPI cards injected by app.js --></div>
+    </section>
+
+    <!-- =========================== FILTERS ========================== -->
+    <section id="filters" class="section filters-section">
+      <div class="filters-bar">
+        <div class="filter-field">
+          <label for="filter-group">Group</label>
+          <select id="filter-group"><option value="">All groups</option></select>
+        </div>
+        <div class="filter-field">
+          <label for="filter-team">Team</label>
+          <select id="filter-team"><option value="">All teams</option></select>
+        </div>
+        <div class="filter-field">
+          <label for="filter-stage">Stage</label>
+          <select id="filter-stage"><option value="">All stages</option></select>
+        </div>
+        <div class="filter-field">
+          <label for="filter-status">Status</label>
+          <select id="filter-status">
+            <option value="">All statuses</option>
+            <option value="Complete">Complete</option>
+            <option value="Scheduled">Scheduled</option>
+          </select>
+        </div>
+        <div class="filter-field">
+          <label for="filter-date">Date</label>
+          <input type="date" id="filter-date" />
+        </div>
+        <button id="filter-reset" class="btn-reset" type="button">Reset</button>
+      </div>
+    </section>
+
+    <!-- ========================= MATCH CENTER ======================= -->
+    <section id="match-center" class="section">
+      <div class="section-head">
+        <h2>Match Center</h2>
+        <p class="section-sub">Results and upcoming fixtures</p>
+      </div>
+      <div class="match-columns">
+        <div class="panel">
+          <h3 class="panel-title">Completed Matches</h3>
+          <div class="table-wrap"><table id="completed-table" class="data-table"></table></div>
+        </div>
+        <div class="panel">
+          <h3 class="panel-title">Upcoming Matches</h3>
+          <div class="table-wrap"><table id="upcoming-table" class="data-table"></table></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================== GROUP STANDINGS ===================== -->
+    <section id="standings" class="section">
+      <div class="section-head">
+        <h2>Group Standings</h2>
+        <p class="section-sub">Win = 3 pts · Draw = 1 pt · sorted by points, GD, goals</p>
+      </div>
+      <div id="standings-grid" class="standings-grid"><!-- group tables injected --></div>
+    </section>
+
+    <!-- ======================= TEAM PERFORMANCE ===================== -->
+    <section id="team-performance" class="section">
+      <div class="section-head">
+        <h2>Team Performance</h2>
+        <p class="section-sub">Goals, points and defensive record</p>
+      </div>
+      <div class="chart-row">
+        <div class="panel chart-panel">
+          <h3 class="panel-title">Goals Scored by Team</h3>
+          <div class="chart-box"><canvas id="chart-goals-team"></canvas></div>
+        </div>
+        <div class="panel chart-panel">
+          <h3 class="panel-title">Points by Team</h3>
+          <div class="chart-box"><canvas id="chart-points-team"></canvas></div>
+        </div>
+      </div>
+      <div class="panel">
+        <h3 class="panel-title">Team Statistics</h3>
+        <div class="table-wrap"><table id="team-stats-table" class="data-table"></table></div>
+      </div>
+    </section>
+
+    <!-- ========================= GOAL ANALYSIS ====================== -->
+    <section id="goal-analysis" class="section">
+      <div class="section-head">
+        <h2>Goal Analysis</h2>
+        <p class="section-sub">Scoring trends across the tournament</p>
+      </div>
+      <div class="chart-row">
+        <div class="panel chart-panel">
+          <h3 class="panel-title">Goals by Group</h3>
+          <div class="chart-box"><canvas id="chart-goals-group"></canvas></div>
+        </div>
+        <div class="panel chart-panel">
+          <h3 class="panel-title">Goals by Match Date</h3>
+          <div class="chart-box"><canvas id="chart-goals-date"></canvas></div>
+        </div>
+        <div class="panel chart-panel">
+          <h3 class="panel-title">Matches by Stage</h3>
+          <div class="chart-box"><canvas id="chart-stage"></canvas></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====================== HISTORICAL WORLD CUP ================== -->
+    <section id="historical" class="section">
+      <div class="section-head">
+        <h2>Historical World Cup</h2>
+        <p class="section-sub">Champions and tournament history, 1930–2022</p>
+      </div>
+      <div class="chart-row">
+        <div class="panel chart-panel chart-panel-wide">
+          <h3 class="panel-title">Titles by Country</h3>
+          <div class="chart-box"><canvas id="chart-titles"></canvas></div>
+        </div>
+      </div>
+      <div class="panel">
+        <h3 class="panel-title">Champion Timeline</h3>
+        <div class="table-wrap"><table id="historical-table" class="data-table"></table></div>
+      </div>
+    </section>
+
+    <!-- ======================== VENUE & HOST ======================== -->
+    <section id="venues" class="section">
+      <div class="section-head">
+        <h2>Venues &amp; Host Cities</h2>
+        <p class="section-sub">Where the matches are played</p>
+      </div>
+      <div class="chart-row">
+        <div class="panel chart-panel chart-panel-wide">
+          <h3 class="panel-title">Matches by Venue</h3>
+          <div class="chart-box"><canvas id="chart-venues"></canvas></div>
+        </div>
+      </div>
+      <div class="panel">
+        <h3 class="panel-title">Venue List</h3>
+        <div class="table-wrap"><table id="venues-table" class="data-table"></table></div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ============================= FOOTER ========================== -->
+  <footer class="site-footer">
+    <div class="container">
+      <p>World Cup 2026 Dashboard · Sample data for demonstration · Built with vanilla JS &amp; Chart.js</p>
+      <p class="footer-note">Phase 1 MVP — static data. API refresh (football-data.org) planned for Phase 2.</p>
+    </div>
+  </footer>
+
+  <script type="module" src="assets/js/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,291 @@
+/* ============================================================
+   World Cup 2026 Dashboard — styles
+   Modern sports-dashboard look: dark header, light surface cards,
+   strong KPI tiles, responsive grids. No framework.
+   ============================================================ */
+
+:root {
+  /* Brand palette */
+  --green: #0a8754;
+  --green-dark: #086c43;
+  --ink: #0f1b2d;
+  --ink-soft: #1c2b40;
+  --slate: #5b6b80;
+  --line: #e4e8ee;
+  --surface: #ffffff;
+  --bg: #f4f6f9;
+  --accent: #e4b343;     /* gold */
+  --accent-2: #2f6fed;   /* blue */
+  --danger: #d65745;
+  --shadow: 0 1px 2px rgba(15, 27, 45, .06), 0 6px 18px rgba(15, 27, 45, .06);
+  --radius: 14px;
+}
+
+* { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  margin: 0;
+  font-family: "Inter", system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+  color: var(--ink);
+  background: var(--bg);
+  line-height: 1.5;
+}
+
+.container {
+  width: min(1240px, 92vw);
+  margin-inline: auto;
+}
+
+/* ----------------------------- Header ----------------------------- */
+.site-header {
+  background: linear-gradient(120deg, var(--ink) 0%, var(--ink-soft) 55%, var(--green-dark) 100%);
+  color: #fff;
+  padding: 18px 0;
+  box-shadow: var(--shadow);
+  position: sticky;
+  top: 0;
+  z-index: 20;
+}
+.header-inner { display: flex; align-items: center; justify-content: space-between; gap: 16px; }
+.brand { display: flex; align-items: center; gap: 14px; }
+.brand-mark {
+  font-size: 30px;
+  background: rgba(255, 255, 255, .12);
+  width: 52px; height: 52px;
+  display: grid; place-items: center;
+  border-radius: 14px;
+}
+.brand h1 { font-size: 1.25rem; margin: 0; font-weight: 800; letter-spacing: -.01em; }
+.brand-sub { margin: 0; font-size: .8rem; color: rgba(255, 255, 255, .7); font-weight: 500; }
+.data-status {
+  font-size: .78rem;
+  background: rgba(255, 255, 255, .12);
+  padding: 6px 12px;
+  border-radius: 999px;
+  white-space: nowrap;
+}
+.data-status.ok { background: rgba(10, 135, 84, .35); }
+.data-status.warn { background: rgba(228, 179, 67, .3); }
+
+/* ----------------------------- Sections --------------------------- */
+.section { padding: 34px 0; border-bottom: 1px solid var(--line); }
+.section:last-of-type { border-bottom: none; }
+.section-head { margin-bottom: 18px; }
+.section-head h2 { margin: 0; font-size: 1.4rem; font-weight: 800; letter-spacing: -.02em; }
+.section-sub { margin: 2px 0 0; color: var(--slate); font-size: .9rem; }
+
+/* ------------------------------ KPIs ------------------------------ */
+.kpi-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(190px, 1fr));
+  gap: 14px;
+}
+.kpi-card {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 16px 18px;
+  box-shadow: var(--shadow);
+  position: relative;
+  overflow: hidden;
+}
+.kpi-card::before {
+  content: "";
+  position: absolute; left: 0; top: 0; bottom: 0; width: 4px;
+  background: var(--green);
+}
+.kpi-card.accent::before { background: var(--accent); }
+.kpi-card.blue::before { background: var(--accent-2); }
+.kpi-label { font-size: .72rem; text-transform: uppercase; letter-spacing: .06em; color: var(--slate); font-weight: 600; }
+.kpi-value { font-size: 1.7rem; font-weight: 800; margin-top: 6px; letter-spacing: -.02em; }
+.kpi-sub { font-size: .78rem; color: var(--slate); margin-top: 2px; }
+
+/* ----------------------------- Filters ---------------------------- */
+.filters-section { padding: 22px 0; }
+.filters-bar {
+  display: flex; flex-wrap: wrap; align-items: end; gap: 14px;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 16px 18px;
+  box-shadow: var(--shadow);
+}
+.filter-field { display: flex; flex-direction: column; gap: 5px; }
+.filter-field label { font-size: .72rem; text-transform: uppercase; letter-spacing: .05em; color: var(--slate); font-weight: 600; }
+.filter-field select,
+.filter-field input {
+  font: inherit; font-size: .9rem;
+  padding: 8px 10px;
+  border: 1px solid var(--line);
+  border-radius: 9px;
+  background: #fff; color: var(--ink);
+  min-width: 150px;
+}
+.filter-field select:focus, .filter-field input:focus {
+  outline: none; border-color: var(--accent-2); box-shadow: 0 0 0 3px rgba(47, 111, 237, .15);
+}
+.btn-reset {
+  font: inherit; font-weight: 600; font-size: .85rem;
+  padding: 9px 16px;
+  border: 1px solid var(--line);
+  border-radius: 9px;
+  background: var(--ink); color: #fff;
+  cursor: pointer;
+  transition: background .15s;
+}
+.btn-reset:hover { background: var(--ink-soft); }
+
+/* ------------------------------ Panels ---------------------------- */
+.panel {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 18px;
+  box-shadow: var(--shadow);
+  margin-bottom: 18px;
+}
+.panel:last-child { margin-bottom: 0; }
+.panel-title { margin: 0 0 14px; font-size: 1rem; font-weight: 700; }
+
+.match-columns { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; }
+.chart-row { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 18px; margin-bottom: 18px; }
+.chart-panel { margin-bottom: 0; }
+.chart-box { position: relative; height: 300px; }
+.chart-panel-wide .chart-box { height: 340px; }
+
+/* ------------------------------ Tables ---------------------------- */
+.table-wrap { overflow-x: auto; }
+.data-table { width: 100%; border-collapse: collapse; font-size: .86rem; }
+.data-table th, .data-table td { padding: 9px 10px; text-align: left; white-space: nowrap; }
+.data-table thead th {
+  background: #f7f9fc;
+  color: var(--slate);
+  font-weight: 600; font-size: .72rem; text-transform: uppercase; letter-spacing: .04em;
+  border-bottom: 1px solid var(--line);
+  position: sticky; top: 0;
+}
+.data-table th.sortable { cursor: pointer; user-select: none; }
+.data-table th.sortable:hover { color: var(--ink); }
+.data-table th.sortable::after { content: " ⇅"; opacity: .35; font-size: .8em; }
+.data-table th.sort-asc::after { content: " ▲"; opacity: .9; }
+.data-table th.sort-desc::after { content: " ▼"; opacity: .9; }
+.data-table tbody tr { border-bottom: 1px solid var(--line); }
+.data-table tbody tr:last-child { border-bottom: none; }
+.data-table tbody tr:hover { background: #f9fbfd; }
+.data-table td.num, .data-table th.num { text-align: right; font-variant-numeric: tabular-nums; }
+.data-table .empty-row td { color: var(--slate); font-style: italic; text-align: center; padding: 20px; }
+
+/* Standings highlights */
+.standings-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 18px; }
+.group-card { background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); box-shadow: var(--shadow); overflow: hidden; }
+.group-card h3 { margin: 0; padding: 14px 18px; font-size: 1rem; background: var(--ink); color: #fff; }
+.group-card .data-table { font-size: .82rem; }
+.row-qualify { background: rgba(10, 135, 84, .07); }
+.row-qualify td:first-child { box-shadow: inset 3px 0 0 var(--green); }
+.row-risk td:first-child { box-shadow: inset 3px 0 0 var(--danger); }
+.pos-badge { display: inline-block; min-width: 20px; text-align: center; font-weight: 700; color: var(--slate); }
+
+/* Score + status pills */
+.score { font-weight: 700; font-variant-numeric: tabular-nums; }
+.pill { font-size: .68rem; font-weight: 700; padding: 3px 8px; border-radius: 999px; text-transform: uppercase; letter-spacing: .03em; }
+.pill-complete { background: rgba(10, 135, 84, .12); color: var(--green-dark); }
+.pill-scheduled { background: rgba(47, 111, 237, .12); color: var(--accent-2); }
+.flag { margin-right: 5px; }
+
+/* ------------------------------ Footer ---------------------------- */
+.site-footer { background: var(--ink); color: rgba(255, 255, 255, .8); padding: 26px 0; margin-top: 10px; }
+.site-footer p { margin: 0; font-size: .85rem; }
+.footer-note { color: rgba(255, 255, 255, .5); font-size: .78rem; margin-top: 6px; }
+
+/* --------------------------- Responsive --------------------------- */
+@media (max-width: 860px) {
+  .match-columns { grid-template-columns: 1fr; }
+  .header-inner { flex-wrap: wrap; }
+}
+@media (max-width: 560px) {
+  .brand h1 { font-size: 1.05rem; }
+  .kpi-value { font-size: 1.45rem; }
+  .filter-field select, .filter-field input { min-width: 130px; }
+}
+
+/* ============================================================
+   HERO — static title banner
+   ============================================================ */
+.hero {
+  position: relative;
+  min-height: 52vh;
+  padding: 64px 0;
+  overflow: hidden;
+  background:
+    radial-gradient(120% 120% at 75% 10%, #16233a 0%, #0d1626 55%, #070d18 100%);
+  display: flex;
+  align-items: center;
+  user-select: none;
+}
+
+/* Fine film-grain noise, like the original demo */
+.hero-noise {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  opacity: .04;
+  pointer-events: none;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  background-size: 128px 128px;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 3;
+  padding-left: 6vw;
+  max-width: 620px;
+  color: #fff;
+}
+.hero-eyebrow {
+  margin: 0 0 14px;
+  font-size: .8rem;
+  letter-spacing: .28em;
+  text-transform: uppercase;
+  color: var(--accent);
+  font-weight: 700;
+}
+.hero-title {
+  margin: 0;
+  font-size: clamp(2.4rem, 6vw, 4.6rem);
+  line-height: 1.02;
+  font-weight: 800;
+  letter-spacing: -.02em;
+  text-shadow: 0 4px 30px rgba(0, 0, 0, .5);
+}
+.hero-tagline {
+  margin: 16px 0 28px;
+  font-size: clamp(1rem, 1.6vw, 1.25rem);
+  color: rgba(255, 255, 255, .82);
+  max-width: 30ch;
+}
+.hero-cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 13px 24px;
+  border-radius: 999px;
+  background: var(--green);
+  color: #fff;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: .95rem;
+  box-shadow: 0 8px 24px rgba(10, 135, 84, .4);
+  transition: transform .15s, background .15s, box-shadow .15s;
+}
+.hero-cta:hover {
+  background: var(--green-dark);
+  transform: translateY(-2px);
+  box-shadow: 0 12px 30px rgba(10, 135, 84, .5);
+}
+
+@media (max-width: 760px) {
+  .hero { min-height: 40vh; padding: 48px 0; }
+  .hero-content { padding: 0 6vw; max-width: none; }
+}

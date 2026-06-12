@@ -1,0 +1,21 @@
+[
+  { "team_id": "MEX", "team_name": "Mexico", "group": "A", "confederation": "CONCACAF", "flag": "🇲🇽" },
+  { "team_id": "RSA", "team_name": "South Africa", "group": "A", "confederation": "CAF", "flag": "🇿🇦" },
+  { "team_id": "KSA", "team_name": "Saudi Arabia", "group": "A", "confederation": "AFC", "flag": "🇸🇦" },
+  { "team_id": "URU", "team_name": "Uruguay", "group": "A", "confederation": "CONMEBOL", "flag": "🇺🇾" },
+
+  { "team_id": "USA", "team_name": "United States", "group": "B", "confederation": "CONCACAF", "flag": "🇺🇸" },
+  { "team_id": "ENG", "team_name": "England", "group": "B", "confederation": "UEFA", "flag": "🏴" },
+  { "team_id": "JPN", "team_name": "Japan", "group": "B", "confederation": "AFC", "flag": "🇯🇵" },
+  { "team_id": "SEN", "team_name": "Senegal", "group": "B", "confederation": "CAF", "flag": "🇸🇳" },
+
+  { "team_id": "CAN", "team_name": "Canada", "group": "C", "confederation": "CONCACAF", "flag": "🇨🇦" },
+  { "team_id": "FRA", "team_name": "France", "group": "C", "confederation": "UEFA", "flag": "🇫🇷" },
+  { "team_id": "CRO", "team_name": "Croatia", "group": "C", "confederation": "UEFA", "flag": "🇭🇷" },
+  { "team_id": "KOR", "team_name": "South Korea", "group": "C", "confederation": "AFC", "flag": "🇰🇷" },
+
+  { "team_id": "BRA", "team_name": "Brazil", "group": "D", "confederation": "CONMEBOL", "flag": "🇧🇷" },
+  { "team_id": "GER", "team_name": "Germany", "group": "D", "confederation": "UEFA", "flag": "🇩🇪" },
+  { "team_id": "MAR", "team_name": "Morocco", "group": "D", "confederation": "CAF", "flag": "🇲🇦" },
+  { "team_id": "AUS", "team_name": "Australia", "group": "D", "confederation": "AFC", "flag": "🇦🇺" }
+]
