@@ -143,19 +143,35 @@ body {
   100% { box-shadow: 0 0 0 0 rgba(47, 230, 230, 0); }
 }
 
-/* Section nav strip (second tier of the sticky masthead) */
-.masthead-nav { border-top: 1px solid var(--line); background: rgba(5, 8, 16, .45); }
-.nav-inner { display: flex; gap: 2px; align-items: stretch; overflow-x: auto; scrollbar-width: none; }
+/* Section nav strip — second tier of the sticky masthead, right-aligned */
+.masthead-nav { border-top: 1px solid var(--line); background: rgba(5, 8, 16, .4); }
+.nav-inner {
+  display: flex; align-items: stretch; justify-content: flex-end;
+  gap: 4px; overflow-x: auto; scrollbar-width: none;
+}
 .nav-inner::-webkit-scrollbar { display: none; }
 .nav-inner a {
-  font-family: var(--mono); font-size: .66rem; letter-spacing: .12em; text-transform: uppercase;
+  position: relative;
+  font-family: var(--mono); font-size: .68rem; font-weight: 500; letter-spacing: .15em; text-transform: uppercase;
   color: var(--muted); text-decoration: none; white-space: nowrap;
-  padding: 12px 14px; border-bottom: 2px solid transparent;
-  transition: color .15s, border-color .15s;
+  padding: 14px 15px;
+  transition: color .18s ease;
+}
+/* Animated cyan underline indicator (centered, grows on hover/active) */
+.nav-inner a::after {
+  content: ""; position: absolute; left: 15px; right: 15px; bottom: 9px; height: 2px;
+  background: var(--cyan); box-shadow: var(--glow-cyan);
+  transform: scaleX(0); transform-origin: center; opacity: 0;
+  transition: transform .22s ease, opacity .22s ease;
 }
 .nav-inner a:hover { color: var(--ink); }
-.nav-inner a.active {
-  color: var(--cyan); border-bottom-color: var(--cyan); text-shadow: var(--glow-cyan);
+.nav-inner a:hover::after { transform: scaleX(1); opacity: .55; }
+.nav-inner a.active { color: var(--cyan); }
+.nav-inner a.active::after { transform: scaleX(1); opacity: 1; }
+
+/* On narrower screens, scroll from the left instead of clipping the start */
+@media (max-width: 1080px) {
+  .nav-inner { justify-content: flex-start; }
 }
 
 /* ============================ SECTIONS ============================ */
