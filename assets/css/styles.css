@@ -67,9 +67,16 @@ body {
   -webkit-backdrop-filter: blur(14px) saturate(140%);
   border-bottom: 1px solid var(--color-border);
 }
-.masthead-inner { display: flex; align-items: center; justify-content: space-between; gap: 18px; padding: 13px 0; }
+.masthead-inner { position: relative; display: flex; align-items: center; justify-content: space-between; gap: 18px; padding: 13px 0; }
 .brand { display: flex; align-items: center; gap: 13px; text-decoration: none; color: inherit; }
 .brand-logo { height: 46px; width: auto; display: block; }
+/* World Cup trophy — centered overlay; height matches the logo, so the
+   masthead height is unchanged (it's absolutely positioned, out of flow). */
+.masthead-trophy {
+  position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%);
+  height: 46px; width: auto; pointer-events: none;
+  filter: drop-shadow(0 3px 6px rgba(0, 0, 0, .45));
+}
 .brand-badge {
   font-family: var(--display); font-weight: 700; font-size: 1.18rem; line-height: 1;
   color: #071A2F; width: 46px; height: 46px; display: grid; place-items: center; border-radius: 12px;
@@ -291,6 +298,7 @@ main { counter-reset: section; display: block; }
   .brand-sub { font-size: .54rem; letter-spacing: .14em; }
   .brand-badge { width: 40px; height: 40px; font-size: 1rem; border-radius: 10px; }
   .brand-logo { height: 40px; }
+  .masthead-trophy { height: 40px; }
   .upd-time { font-size: .62rem; }
 
   .hero { padding: 32px 0 26px; }
@@ -317,6 +325,7 @@ main { counter-reset: section; display: block; }
   .kpi-grid { grid-template-columns: 1fr; }
   .filter-field { flex: 1 1 100%; }
   .brand-logo { height: 36px; }
+  .masthead-trophy { height: 36px; }
   .section-head { column-gap: 14px; }
   .section-head::before { font-size: 1.6rem; padding-right: 12px; }
 }
