@@ -261,6 +261,9 @@ main { counter-reset: section; display: block; }
 .footer-brand .sep { color: var(--color-gold); margin: 0 8px; }
 .footer-brand .tag { color: var(--color-gold); }
 .footer-tagline { margin: 12px auto 0; max-width: 580px; font-size: .9rem; line-height: 1.55; color: var(--color-text-secondary); }
+.footer-contact { margin: 16px 0 0; font-family: var(--mono); font-size: .76rem; letter-spacing: .1em; text-transform: uppercase; color: var(--color-text-secondary); }
+.footer-contact a { color: var(--color-gold); text-decoration: none; text-transform: none; letter-spacing: 0; margin-left: 6px; border-bottom: 1px solid transparent; transition: border-color .15s; }
+.footer-contact a:hover { border-bottom-color: var(--color-gold); }
 
 /* ============================ RESPONSIVE ========================= */
 
