@@ -94,12 +94,11 @@ body {
 /* Lawrence cutout — stands beside the status readout, lit to match the HUD */
 .masthead-meta { display: flex; align-items: center; gap: 16px; }
 .masthead-figure {
-  height: 78px; width: auto; display: block;
-  align-self: flex-end;
-  margin-bottom: -14px;            /* feet rest on the masthead's glowing edge */
+  height: 40px; width: auto; display: block;
+  align-self: center;
   filter:
-    drop-shadow(0 0 12px rgba(47, 230, 230, .5))
-    drop-shadow(0 8px 10px rgba(0, 0, 0, .55));
+    drop-shadow(0 0 8px rgba(47, 230, 230, .5))
+    drop-shadow(0 4px 6px rgba(0, 0, 0, .55));
   pointer-events: none;
   -webkit-user-select: none; user-select: none;
 }
