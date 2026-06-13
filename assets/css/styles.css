@@ -262,15 +262,58 @@ main { counter-reset: section; display: block; }
 .footer-tagline { margin: 12px auto 0; max-width: 580px; font-size: .9rem; line-height: 1.55; color: var(--color-text-secondary); }
 
 /* ============================ RESPONSIVE ========================= */
-@media (max-width: 860px) {
-  .match-columns { grid-template-columns: 1fr; }
-  .hero { padding: 42px 0 34px; }
-}
-@media (max-width: 560px) {
-  .brand-title { font-size: 1.1rem; }
-  .brand-sub { font-size: .55rem; letter-spacing: .16em; }
-  .kpi-value { font-size: 2rem; }
-  .filter-field select, .filter-field input { min-width: 130px; }
+
+/* Tablet */
+@media (max-width: 960px) {
+  .hero { padding: 46px 0 34px; }
+  .section { padding: 40px 0; }
+  .chart-box { height: 280px; }
+  .chart-panel-wide .chart-box { height: 320px; }
 }
 
-@media (prefers-reduced-motion: reduce) { .section { animation: none; } }
+/* Small tablet / large phone — collapse multi-column layouts to one */
+@media (max-width: 760px) {
+  .match-columns { grid-template-columns: 1fr; }
+  .chart-row { grid-template-columns: 1fr; }
+  .standings-grid { grid-template-columns: 1fr; }
+  .masthead-inner { padding: 11px 0; }
+  .section-head::before { font-size: 1.9rem; padding-right: 14px; }
+}
+
+/* Phone */
+@media (max-width: 560px) {
+  .container { width: 94vw; }
+  .brand-title { font-size: 1.05rem; }
+  .brand-sub { font-size: .54rem; letter-spacing: .14em; }
+  .brand-badge { width: 40px; height: 40px; font-size: 1rem; border-radius: 10px; }
+  .upd-time { font-size: .62rem; }
+
+  .hero { padding: 32px 0 26px; }
+  .hero-kicker { font-size: .64rem; letter-spacing: .18em; }
+  .section { padding: 32px 0; }
+
+  /* Two compact KPI cards per row */
+  .kpi-grid { grid-template-columns: 1fr 1fr; gap: 12px; }
+  .kpi-card { padding: 16px; }
+  .kpi-value { font-size: 1.85rem; }
+
+  .panel { padding: 18px; }
+  .chart-box { height: 260px; }
+
+  /* Filters: two fields per row, full-width inputs, full-width reset */
+  .filters-bar { gap: 12px; padding: 14px; }
+  .filter-field { flex: 1 1 calc(50% - 6px); }
+  .filter-field select, .filter-field input { min-width: 0; width: 100%; }
+  .btn-reset { flex: 1 1 100%; }
+}
+
+/* Small phone */
+@media (max-width: 400px) {
+  .kpi-grid { grid-template-columns: 1fr; }
+  .filter-field { flex: 1 1 100%; }
+  .brand-sub { display: none; }
+  .section-head { column-gap: 14px; }
+  .section-head::before { font-size: 1.6rem; padding-right: 12px; }
+}
+
+@media (prefers-reduced-motion: reduce) { .section, .atmos { animation: none; } }
