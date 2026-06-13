@@ -74,9 +74,33 @@ function renderAll() {
 
 /* -------------------------------- Init -------------------------------- */
 function setStatus(text, variant = "") {
+  // Status readout is optional — no-op if it's not in the DOM.
   const el = document.getElementById("data-status");
+  if (!el) return;
   el.textContent = text;
   el.className = "data-status" + (variant ? " " + variant : "");
+}
+
+/** Highlight the section nav link for whichever section is near the top. */
+function initSectionNav() {
+  const links = [...document.querySelectorAll(".nav-inner a")];
+  if (!links.length) return;
+  const map = new Map();
+  for (const a of links) {
+    const sec = document.getElementById(a.getAttribute("href").slice(1));
+    if (sec) map.set(sec, a);
+  }
+  const obs = new IntersectionObserver(
+    (entries) => {
+      for (const e of entries) {
+        if (!e.isIntersecting) continue;
+        links.forEach((l) => l.classList.remove("active"));
+        map.get(e.target)?.classList.add("active");
+      }
+    },
+    { rootMargin: "-118px 0px -68% 0px", threshold: 0 }
+  );
+  for (const sec of map.keys()) obs.observe(sec);
 }
 
 async function init() {
@@ -102,6 +126,7 @@ async function init() {
   // The historical table is static (not affected by match filters) — render once.
   tables.renderHistorical(data.historical);
 
+  initSectionNav();
   renderAll();
 }
 

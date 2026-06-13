@@ -143,9 +143,24 @@ body {
   100% { box-shadow: 0 0 0 0 rgba(47, 230, 230, 0); }
 }
 
+/* Section nav strip (second tier of the sticky masthead) */
+.masthead-nav { border-top: 1px solid var(--line); background: rgba(5, 8, 16, .45); }
+.nav-inner { display: flex; gap: 2px; align-items: stretch; overflow-x: auto; scrollbar-width: none; }
+.nav-inner::-webkit-scrollbar { display: none; }
+.nav-inner a {
+  font-family: var(--mono); font-size: .66rem; letter-spacing: .12em; text-transform: uppercase;
+  color: var(--muted); text-decoration: none; white-space: nowrap;
+  padding: 12px 14px; border-bottom: 2px solid transparent;
+  transition: color .15s, border-color .15s;
+}
+.nav-inner a:hover { color: var(--ink); }
+.nav-inner a.active {
+  color: var(--cyan); border-bottom-color: var(--cyan); text-shadow: var(--glow-cyan);
+}
+
 /* ============================ SECTIONS ============================ */
 main { counter-reset: section; display: block; }
-.section { padding: 48px 0; animation: rise .6s cubic-bezier(.2, .7, .2, 1) both; }
+.section { padding: 48px 0; scroll-margin-top: 116px; animation: rise .6s cubic-bezier(.2, .7, .2, 1) both; }
 .section:nth-of-type(1){ animation-delay: .02s; }
 .section:nth-of-type(2){ animation-delay: .08s; }
 .section:nth-of-type(3){ animation-delay: .14s; }
