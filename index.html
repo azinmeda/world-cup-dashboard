@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>FIFA World Cup 2026 — Dashboard</title>
-  <meta name="description" content="Live statistics, results, standings and history for the FIFA World Cup 2026." />
+  <title>World Cup Snapshot — Track the Cup. Read the Game.</title>
+  <meta name="description" content="World Cup Snapshot — live statistics, results, standings and history for the FIFA World Cup 2026." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@400;500;600;700&family=Sora:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet" />
@@ -21,10 +21,10 @@
   <header class="masthead">
     <div class="container masthead-inner">
       <a class="brand" href="#top">
-        <span class="brand-badge" aria-hidden="true">26</span>
+        <span class="brand-badge" aria-hidden="true">WC</span>
         <span class="brand-text">
-          <span class="brand-title">FIFA <em>World Cup</em></span>
-          <span class="brand-sub">Live Tracker · Canada · Mexico · USA</span>
+          <span class="brand-title">World Cup <em>Snapshot</em></span>
+          <span class="brand-sub">Canada · Mexico · United States · 2026</span>
         </span>
       </a>
     </div>
@@ -41,16 +41,19 @@
     </nav>
   </header>
 
-  <main class="container">
-
-    <!-- ====================== EXECUTIVE SUMMARY ====================== -->
-    <section id="summary" class="section">
-      <div class="section-head">
-        <h2>Event Overview</h2>
-        <p class="section-sub">Tournament at a glance</p>
+  <!-- ============================== HERO ============================== -->
+  <section id="summary" class="hero">
+    <div class="container">
+      <div class="hero-head">
+        <p class="hero-kicker">FIFA World Cup 2026 · Live Tournament Tracker</p>
+        <h1 class="hero-title">World Cup <span>Snapshot</span></h1>
+        <p class="hero-tagline">Track the Cup. Read the Game.</p>
       </div>
       <div id="kpi-grid" class="kpi-grid"><!-- KPI cards injected by app.js --></div>
-    </section>
+    </div>
+  </section>
+
+  <main class="container">
 
     <!-- =========================== FILTERS ========================== -->
     <section id="filters" class="section filters-section">
@@ -195,7 +198,7 @@
   <!-- ============================= FOOTER ========================== -->
   <footer class="site-footer">
     <div class="container">
-      <p>World Cup 2026 Dashboard · Live data via football-data.org · Built with vanilla JS &amp; Chart.js</p>
+      <p>World Cup Snapshot · Live data via football-data.org · Built with vanilla JS &amp; Chart.js</p>
       <p class="footer-note">Fixtures, results &amp; standings from the football-data.org API. Re-run <code>scripts/fetch_api_data.py</code> to refresh.</p>
     </div>
   </footer>

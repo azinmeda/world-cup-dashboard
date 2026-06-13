@@ -80,9 +80,10 @@ export function renderStandings(matches, teams) {
     const rows = standings[g];
     const lastIdx = rows.length - 1;
     const body = rows.map((r, i) => {
-      // Top two qualify; bottom team flagged at risk (simple MVP heuristic).
+      // Leader highlighted gold, runner-up green (qualification), last red (at risk).
       let cls = "";
-      if (i < 2) cls = "row-qualify";
+      if (i === 0) cls = "row-leader";
+      else if (i === 1) cls = "row-qualify";
       else if (i === lastIdx && rows.length > 2) cls = "row-risk";
       return `
         <tr class="${cls}">
