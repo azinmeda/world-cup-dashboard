@@ -90,18 +90,6 @@ body {
   border-image: linear-gradient(90deg, transparent, var(--cyan), var(--violet), transparent) 1;
 }
 .masthead-inner { display: flex; align-items: center; justify-content: space-between; gap: 18px; padding: 14px 0; }
-
-/* Lawrence cutout — stands beside the status readout, lit to match the HUD */
-.masthead-meta { display: flex; align-items: center; gap: 16px; }
-.masthead-figure {
-  height: 40px; width: auto; display: block;
-  align-self: center;
-  filter:
-    drop-shadow(0 0 8px rgba(47, 230, 230, .5))
-    drop-shadow(0 4px 6px rgba(0, 0, 0, .55));
-  pointer-events: none;
-  -webkit-user-select: none; user-select: none;
-}
 .brand { display: flex; align-items: center; gap: 14px; text-decoration: none; color: inherit; }
 .brand-badge {
   font-family: var(--display); font-weight: 700; font-size: 1.15rem; line-height: 1;
@@ -357,7 +345,6 @@ main { counter-reset: section; display: block; }
   .brand-sub { font-size: .56rem; letter-spacing: .18em; }
   .kpi-value { font-size: 2rem; }
   .filter-field select, .filter-field input { min-width: 130px; }
-  .masthead-figure { display: none; }
 }
 
 @media (prefers-reduced-motion: reduce) {
