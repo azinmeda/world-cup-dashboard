@@ -129,6 +129,8 @@ body {
 }
 .hero-title span { color: var(--color-gold); }
 .hero-tagline { font-size: clamp(1.05rem, 2vw, 1.35rem); color: var(--color-text-secondary); margin: 16px 0 0; }
+.hero-credit { margin: 18px 0 0; font-family: var(--mono); font-size: .72rem; letter-spacing: .2em; text-transform: uppercase; color: var(--color-text-secondary); }
+.hero-credit span { color: var(--color-gold); font-weight: 700; }
 
 /* ============================ SECTIONS ============================ */
 main { counter-reset: section; display: block; }
