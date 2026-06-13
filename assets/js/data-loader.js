@@ -27,17 +27,19 @@ export const loadTeams = () => loadJSON("teams.json");
 export const loadGroups = () => loadJSON("groups.json");
 export const loadVenues = () => loadJSON("venues.json");
 export const loadHistoricalWorldCup = () => loadJSON("historical_world_cup.json");
+export const loadMeta = () => loadJSON("meta.json", {});
 
 /** Load every dataset in parallel. */
 export async function loadAll() {
-  const [matches, teams, groups, venues, historical] = await Promise.all([
+  const [matches, teams, groups, venues, historical, meta] = await Promise.all([
     loadMatches(),
     loadTeams(),
     loadGroups(),
     loadVenues(),
     loadHistoricalWorldCup(),
+    loadMeta(),
   ]);
-  return { matches, teams, groups, venues, historical };
+  return { matches, teams, groups, venues, historical, meta };
 }
 
 /**

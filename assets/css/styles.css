@@ -79,6 +79,19 @@ body {
 .brand-title em { color: var(--color-gold); font-style: normal; }
 .brand-sub { display: block; font-family: var(--mono); font-size: .6rem; letter-spacing: .2em; text-transform: uppercase; color: var(--color-text-secondary); margin-top: 4px; }
 
+/* Last-updated stamp (top right of the masthead) */
+.masthead-meta { text-align: right; line-height: 1.25; }
+.upd-label { display: block; font-family: var(--mono); font-size: .54rem; letter-spacing: .2em; text-transform: uppercase; color: var(--color-text-secondary); }
+.upd-time {
+  display: inline-flex; align-items: center; gap: 7px;
+  font-family: var(--mono); font-size: .72rem; color: var(--color-gold); margin-top: 3px; white-space: nowrap;
+}
+.upd-time::before {
+  content: ""; width: 7px; height: 7px; border-radius: 50%;
+  background: var(--color-green); box-shadow: 0 0 8px rgba(24, 165, 88, .7);
+}
+@media (max-width: 480px) { .upd-label { display: none; } .upd-time { font-size: .64rem; } }
+
 /* Section nav strip — right-aligned, gold active state */
 .masthead-nav { border-top: 1px solid var(--color-border); background: rgba(11, 37, 69, .5); }
 .nav-inner { display: flex; align-items: stretch; justify-content: flex-end; gap: 4px; overflow-x: auto; scrollbar-width: none; }

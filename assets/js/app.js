@@ -9,7 +9,21 @@ import * as tables from "./tables.js";
 import { populateFilters, applyFilters, initFilters } from "./filters.js";
 
 // Full datasets, loaded once. Filtering operates on `data.matches`.
-let data = { matches: [], teams: [], groups: [], venues: [], historical: [] };
+let data = { matches: [], teams: [], groups: [], venues: [], historical: [], meta: {} };
+
+/** Show when the data was last pulled from the API, in the visitor's local time. */
+function setUpdated(meta) {
+  const el = document.getElementById("last-updated");
+  if (!el) return;
+  const iso = meta && meta.last_updated;
+  if (!iso) { el.textContent = "—"; return; }
+  const d = new Date(iso);
+  el.setAttribute("datetime", iso);
+  el.textContent = d.toLocaleString(undefined, {
+    month: "short", day: "numeric", year: "numeric", hour: "2-digit", minute: "2-digit",
+  });
+  el.title = "Data last fetched from football-data.org";
+}
 
 /* ------------------------------ KPI cards ----------------------------- */
 function kpiCard(label, value, sub = "", variant = "") {
@@ -111,6 +125,8 @@ async function init() {
     setStatus("No match data found", "warn");
     return;
   }
+
+  setUpdated(data.meta);
 
   const warnings = validateData(data.matches, data.teams, data.venues);
   setStatus(

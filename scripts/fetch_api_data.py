@@ -98,6 +98,16 @@ def main() -> int:
     from clean_data import transform_and_export  # local import keeps deps light
 
     transform_and_export(matches, standings, DATA_DIR)
+
+    # Stamp when the data was pulled from the API (UTC ISO-8601).
+    from datetime import datetime, timezone
+    stamp = datetime.now(timezone.utc).replace(microsecond=0).isoformat()
+    (DATA_DIR / "meta.json").write_text(
+        json.dumps({"last_updated": stamp, "source": "football-data.org"}, indent=2),
+        encoding="utf-8",
+    )
+    print(f"  • meta.json    — last_updated {stamp}")
+
     print(f"Done. Dashboard JSON written to {DATA_DIR}")
     return 0
 
