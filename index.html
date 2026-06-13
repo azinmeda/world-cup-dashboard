@@ -53,15 +53,9 @@
         <h1 class="hero-title">World Cup <span>Snapshot</span></h1>
         <p class="hero-tagline">Track the Cup. Read the Game.</p>
       </div>
-      <div id="kpi-grid" class="kpi-grid"><!-- KPI cards injected by app.js --></div>
-    </div>
-  </section>
 
-  <main class="container">
-
-    <!-- =========================== FILTERS ========================== -->
-    <section id="filters" class="section filters-section">
-      <div class="filters-bar">
+      <!-- Filters control the data shown across the whole dashboard -->
+      <div id="filters" class="filters-bar hero-filters">
         <div class="filter-field">
           <label for="filter-group">Group</label>
           <select id="filter-group"><option value="">All groups</option></select>
@@ -88,7 +82,12 @@
         </div>
         <button id="filter-reset" class="btn-reset" type="button">Reset</button>
       </div>
-    </section>
+
+      <div id="kpi-grid" class="kpi-grid"><!-- KPI cards injected by app.js --></div>
+    </div>
+  </section>
+
+  <main class="container">
 
     <!-- ========================= MATCH CENTER ======================= -->
     <section id="match-center" class="section">
