@@ -142,9 +142,9 @@
     "group": "F",
     "home_team": "Netherlands",
     "away_team": "Japan",
-    "home_score": null,
-    "away_score": null,
-    "status": "Scheduled",
+    "home_score": 2,
+    "away_score": 2,
+    "status": "Complete",
     "venue": "",
     "city": "",
     "country": ""
