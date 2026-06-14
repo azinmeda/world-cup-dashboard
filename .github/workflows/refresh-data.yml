@@ -1,0 +1,51 @@
+name: Refresh World Cup data
+
+# Pulls the latest fixtures, results and standings from football-data.org and
+# commits the refreshed JSON. Each push auto-redeploys Vercel and GitHub Pages,
+# so the live dashboard (and its "Data updated" stamp) updates on its own.
+
+on:
+  schedule:
+    - cron: "0 */2 * * *"     # every 2 hours (UTC)
+  workflow_dispatch: {}        # plus a manual "Run workflow" button
+
+# Allow the job to push the refreshed data back to the repo.
+permissions:
+  contents: write
+
+concurrency:
+  group: refresh-data
+  cancel-in-progress: false
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install dependencies
+        run: pip install -r scripts/requirements.txt
+
+      - name: Fetch latest data
+        env:
+          FOOTBALL_DATA_API_KEY: ${{ secrets.FOOTBALL_DATA_API_KEY }}
+        run: python scripts/fetch_api_data.py
+
+      - name: Commit & push if data changed
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          if [ -n "$(git status --porcelain data)" ]; then
+            git add data
+            git commit -m "chore: auto-refresh tournament data"
+            git push
+            echo "Pushed refreshed data."
+          else
+            echo "No data changes — nothing to commit."
+          fi
