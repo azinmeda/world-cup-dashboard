@@ -98,8 +98,26 @@ def transform_teams(api_standings: dict) -> list[dict]:
     return teams
 
 
-def transform_and_export(api_matches: dict, api_standings: dict, data_dir: Path) -> None:
-    """Write dashboard-ready matches.json and teams.json into data_dir."""
+def transform_scorers(api_scorers: dict) -> list[dict]:
+    """Build the Golden Boot leaderboard from the /scorers payload."""
+    out: list[dict] = []
+    for s in api_scorers.get("scorers", []):
+        p = s.get("player", {})
+        t = s.get("team", {})
+        out.append(
+            {
+                "player": p.get("name"),
+                "team": t.get("name"),
+                "goals": s.get("goals") or 0,
+                "assists": s.get("assists"),
+            }
+        )
+    out.sort(key=lambda x: (-x["goals"], x["player"] or ""))
+    return out
+
+
+def transform_and_export(api_matches: dict, api_standings: dict, api_scorers: dict, data_dir: Path) -> None:
+    """Write dashboard-ready matches.json, teams.json and scorers.json into data_dir."""
     data_dir.mkdir(parents=True, exist_ok=True)
 
     matches = transform_matches(api_matches)
@@ -117,5 +135,12 @@ def transform_and_export(api_matches: dict, api_standings: dict, data_dir: Path)
         print(f"  • teams.json   — {len(teams)} teams across {len(groups)} groups ({', '.join(groups)})")
     else:
         print("  • teams.json   — skipped (no standings returned)")
+
+    scorers = transform_scorers(api_scorers)
+    (data_dir / "scorers.json").write_text(
+        json.dumps(scorers, indent=2, ensure_ascii=False), encoding="utf-8"
+    )
+    top = scorers[0]["goals"] if scorers else 0
+    print(f"  • scorers.json — {len(scorers)} scorers (leader: {top} goals)")
 
     # venues.json is curated (free tier provides no venue data) and left untouched.

@@ -9,7 +9,7 @@ import * as tables from "./tables.js";
 import { populateFilters, applyFilters, initFilters } from "./filters.js";
 
 // Full datasets, loaded once. Filtering operates on `data.matches`.
-let data = { matches: [], teams: [], groups: [], venues: [], historical: [], meta: {} };
+let data = { matches: [], teams: [], groups: [], venues: [], historical: [], scorers: [], meta: {} };
 
 /** Show when the data was last pulled from the API, in the visitor's local time. */
 function setUpdated(meta) {
@@ -47,6 +47,16 @@ function renderKPIs(matches) {
   const groupCount = new Set(teams.map((t) => t.group).filter(Boolean)).size;
   const hostCountries = [...new Set(data.venues.map((v) => v.country))];
 
+  // Golden Boot leader(s) — tournament-wide (not affected by match filters).
+  const scorers = data.scorers || [];
+  const topGoals = scorers.length ? scorers[0].goals : 0;
+  const leaders = scorers.filter((s) => s.goals === topGoals && topGoals > 0);
+  const lastName = (n) => (n || "").split(" ").slice(-1)[0];
+  let bootSub;
+  if (!leaders.length) bootSub = "no goals yet";
+  else if (leaders.length === 1) bootSub = `${leaders[0].player} · ${leaders[0].team}`;
+  else bootSub = `${leaders.length} tied: ${leaders.slice(0, 3).map((l) => lastName(l.player)).join(", ")}${leaders.length > 3 ? "…" : ""}`;
+
   const cards = [
     kpiCard("Total Matches", matches.length, `${completed} done · ${scheduled} upcoming`, ""),
     kpiCard("Completed", completed, "matches played", "blue"),
@@ -54,6 +64,7 @@ function renderKPIs(matches) {
     kpiCard("Avg Goals / Match", avg.toFixed(2), "scoring rate", ""),
     kpiCard("Top Scoring Team", topScorer && topScorer.goals_for ? topScorer.team : "—",
       topScorer && topScorer.goals_for ? `${topScorer.goals_for} goals` : "no goals yet", "accent"),
+    kpiCard("Golden Boot", topGoals || "—", bootSub, ""),
     kpiCard("Best Defense", bestDef ? bestDef.team : "—",
       bestDef ? `${bestDef.goals_against} conceded` : "—", "blue"),
     kpiCard("Highest Scoring Match",
@@ -139,8 +150,9 @@ async function init() {
   populateFilters(data);
   initFilters(renderAll);
 
-  // The historical table is static (not affected by match filters) — render once.
+  // Static tables (not affected by match filters) — render once.
   tables.renderHistorical(data.historical);
+  tables.renderScorers(data.scorers);
 
   initSectionNav();
   renderAll();

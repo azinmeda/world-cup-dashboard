@@ -80,10 +80,11 @@ def main() -> int:
     load_env()
     key = get_api_key()
 
-    print("Fetching competition, matches and standings from football-data.org…")
+    print("Fetching competition, matches, standings and scorers from football-data.org…")
     competition = api_get(f"competitions/{COMPETITION}", key)
     matches = api_get(f"competitions/{COMPETITION}/matches", key)
     standings = api_get(f"competitions/{COMPETITION}/standings", key)
+    scorers = api_get(f"competitions/{COMPETITION}/scorers?limit=25", key)
 
     if not matches:
         print("No matches returned — aborting without overwriting existing data.")
@@ -93,11 +94,12 @@ def main() -> int:
     save_raw("competition", competition)
     save_raw("matches", matches)
     save_raw("standings", standings)
+    save_raw("scorers", scorers)
 
     # Hand the raw payloads to clean_data for transformation into dashboard JSON.
     from clean_data import transform_and_export  # local import keeps deps light
 
-    transform_and_export(matches, standings, DATA_DIR)
+    transform_and_export(matches, standings, scorers, DATA_DIR)
 
     # Stamp when the data was pulled from the API (UTC ISO-8601).
     from datetime import datetime, timezone

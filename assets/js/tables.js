@@ -140,6 +140,34 @@ export function renderTeamStats(matches, teams) {
   });
 }
 
+/* ----------------------- Top scorers ---------------------------- */
+export function renderScorers(scorers) {
+  const table = document.getElementById("scorers-table");
+  if (!table) return;
+
+  // Assign competition-style ranks (ties share a rank).
+  let rank = 0, prevGoals = null;
+  const rows = (scorers || []).map((s, i) => {
+    if (s.goals !== prevGoals) { rank = i + 1; prevGoals = s.goals; }
+    return { ...s, rank };
+  });
+  const maxGoals = rows.length ? rows[0].goals : 0;
+
+  const body = rows.length
+    ? rows.map((r) => `
+        <tr class="${r.goals === maxGoals && maxGoals > 0 ? "row-leader" : ""}">
+          <td class="num"><span class="pos-badge">${r.rank}</span></td>
+          <td>${esc(r.player)}</td>
+          <td>${teamCell(r.team)}</td>
+          <td class="num score">${r.goals}</td>
+        </tr>`).join("")
+    : emptyRow(4, "No goals scored yet.");
+
+  table.innerHTML = `
+    <thead><tr><th class="num">#</th><th>Player</th><th>Team</th><th class="num">Goals</th></tr></thead>
+    <tbody>${body}</tbody>`;
+}
+
 /* ----------------------- Historical table ----------------------- */
 export function renderHistorical(historical) {
   const rows = historical.slice().sort((a, b) => b.year - a.year);
