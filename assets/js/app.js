@@ -11,6 +11,23 @@ import { populateFilters, applyFilters, initFilters } from "./filters.js";
 // Full datasets, loaded once. Filtering operates on `data.matches`.
 let data = { matches: [], teams: [], groups: [], venues: [], historical: [], scorers: [], meta: {} };
 
+/** Compute tournament progress from the season start/end dates (UTC-based). */
+function tournamentDay(meta) {
+  const start = meta && meta.season_start;
+  const end = meta && meta.season_end;
+  if (!start || !end) return null;
+  const DAY = 86400000;
+  const s = Date.parse(start + "T00:00:00Z");
+  const e = Date.parse(end + "T00:00:00Z");
+  if (isNaN(s) || isNaN(e)) return null;
+  const now = new Date();
+  const today = Date.UTC(now.getUTCFullYear(), now.getUTCMonth(), now.getUTCDate());
+  return {
+    day: Math.floor((today - s) / DAY) + 1,     // day 1 == start date
+    total: Math.round((e - s) / DAY) + 1,        // inclusive length
+  };
+}
+
 /** Show when the data was last pulled from the API, in the visitor's local time. */
 function setUpdated(meta) {
   const el = document.getElementById("last-updated");
@@ -47,6 +64,15 @@ function renderKPIs(matches) {
   const groupCount = new Set(teams.map((t) => t.group).filter(Boolean)).size;
   const hostCountries = [...new Set(data.venues.map((v) => v.country))];
 
+  // Tournament progress — "Day X of N" from the season start/end dates.
+  const td = tournamentDay(data.meta);
+  let dayVal = "—", daySub = "tournament dates pending";
+  if (td) {
+    if (td.day < 1) { dayVal = `${1 - td.day}d`; daySub = "until kickoff"; }
+    else if (td.day > td.total) { dayVal = "Done"; daySub = `${td.total}-day tournament complete`; }
+    else { dayVal = `Day ${td.day}`; daySub = `of ${td.total} · ${td.total - td.day} to go`; }
+  }
+
   // Golden Boot leader(s) — tournament-wide (not affected by match filters).
   const scorers = data.scorers || [];
   const topGoals = scorers.length ? scorers[0].goals : 0;
@@ -58,6 +84,7 @@ function renderKPIs(matches) {
   else bootSub = `${leaders.length} tied: ${leaders.slice(0, 3).map((l) => lastName(l.player)).join(", ")}${leaders.length > 3 ? "…" : ""}`;
 
   const cards = [
+    kpiCard("Tournament Day", dayVal, daySub, "accent"),
     kpiCard("Total Matches", matches.length, `${completed} done · ${scheduled} upcoming`, ""),
     kpiCard("Completed", completed, "matches played", "blue"),
     kpiCard("Total Goals", goals, "in completed matches", "accent"),

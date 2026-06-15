@@ -101,14 +101,19 @@ def main() -> int:
 
     transform_and_export(matches, standings, scorers, DATA_DIR)
 
-    # Stamp when the data was pulled from the API (UTC ISO-8601).
+    # Stamp when the data was pulled, plus the tournament's start/end dates so the
+    # dashboard can show "Tournament Day X of N".
     from datetime import datetime, timezone
     stamp = datetime.now(timezone.utc).replace(microsecond=0).isoformat()
-    (DATA_DIR / "meta.json").write_text(
-        json.dumps({"last_updated": stamp, "source": "football-data.org"}, indent=2),
-        encoding="utf-8",
-    )
-    print(f"  • meta.json    — last_updated {stamp}")
+    season = (competition or {}).get("currentSeason", {}) or {}
+    meta = {
+        "last_updated": stamp,
+        "source": "football-data.org",
+        "season_start": season.get("startDate"),
+        "season_end": season.get("endDate"),
+    }
+    (DATA_DIR / "meta.json").write_text(json.dumps(meta, indent=2), encoding="utf-8")
+    print(f"  • meta.json    — last_updated {stamp} | season {season.get('startDate')} to {season.get('endDate')}")
 
     print(f"Done. Dashboard JSON written to {DATA_DIR}")
     return 0
