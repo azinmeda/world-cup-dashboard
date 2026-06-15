@@ -28,13 +28,6 @@
     "crest": "https://crests.football-data.org/772.png"
   },
   {
-    "team_id": "CPV",
-    "team_name": "Cape Verde Islands",
-    "group": "Atlantic Division",
-    "confederation": "",
-    "crest": "https://crests.football-data.org/cape_verde.svg"
-  },
-  {
     "team_id": "BIH",
     "team_name": "Bosnia-Herzegovina",
     "group": "B",
@@ -89,13 +82,6 @@
     "group": "C",
     "confederation": "",
     "crest": "https://crests.football-data.org/814.svg"
-  },
-  {
-    "team_id": "ESP",
-    "team_name": "Spain",
-    "group": "Central Division",
-    "confederation": "",
-    "crest": "https://crests.football-data.org/760.svg"
   },
   {
     "team_id": "AUS",
@@ -208,6 +194,34 @@
     "group": "G",
     "confederation": "",
     "crest": "https://crests.football-data.org/783.svg"
+  },
+  {
+    "team_id": "CPV",
+    "team_name": "Cape Verde Islands",
+    "group": "H",
+    "confederation": "",
+    "crest": "https://crests.football-data.org/cape_verde.svg"
+  },
+  {
+    "team_id": "KSA",
+    "team_name": "Saudi Arabia",
+    "group": "H",
+    "confederation": "",
+    "crest": "https://crests.football-data.org/saudi_arabia.svg"
+  },
+  {
+    "team_id": "ESP",
+    "team_name": "Spain",
+    "group": "H",
+    "confederation": "",
+    "crest": "https://crests.football-data.org/760.svg"
+  },
+  {
+    "team_id": "URU",
+    "team_name": "Uruguay",
+    "group": "H",
+    "confederation": "",
+    "crest": "https://crests.football-data.org/758.svg"
   },
   {
     "team_id": "FRA",

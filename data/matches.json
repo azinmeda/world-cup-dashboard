@@ -202,9 +202,9 @@
     "group": "G",
     "home_team": "Belgium",
     "away_team": "Egypt",
-    "home_score": null,
-    "away_score": null,
-    "status": "Scheduled",
+    "home_score": 1,
+    "away_score": 1,
+    "status": "Complete",
     "venue": "",
     "city": "",
     "country": ""
