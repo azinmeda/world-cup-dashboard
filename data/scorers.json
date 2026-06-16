@@ -1,5 +1,11 @@
 [
   {
+    "player": "Elijah Just",
+    "team": "New Zealand",
+    "goals": 2,
+    "assists": null
+  },
+  {
     "player": "Folarin Balogun",
     "team": "United States",
     "goals": 2,
@@ -40,12 +46,6 @@
     "team": "Canada",
     "goals": 1,
     "assists": null
-  },
-  {
-    "player": "Deniz Undav",
-    "team": "Germany",
-    "goals": 1,
-    "assists": 2
   },
   {
     "player": "Felix Kalu Nmecha",
