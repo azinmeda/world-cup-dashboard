@@ -18,6 +18,12 @@
     "assists": null
   },
   {
+    "player": "Kylian Mbappé",
+    "team": "France",
+    "goals": 2,
+    "assists": null
+  },
+  {
     "player": "Yasin Ayari",
     "team": "Sweden",
     "goals": 2,
@@ -118,12 +124,6 @@
     "team": "Paraguay",
     "goals": 1,
     "assists": null
-  },
-  {
-    "player": "Nathaniel Brown",
-    "team": "Germany",
-    "goals": 1,
-    "assists": 1
   },
   {
     "player": "Nestor Irankunda",
