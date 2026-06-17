@@ -1,7 +1,19 @@
 [
   {
+    "player": "Lionel Messi",
+    "team": "Argentina",
+    "goals": 3,
+    "assists": null
+  },
+  {
     "player": "Elijah Just",
     "team": "New Zealand",
+    "goals": 2,
+    "assists": null
+  },
+  {
+    "player": "Erling Haaland",
+    "team": "Norway",
     "goals": 2,
     "assists": null
   },
@@ -84,12 +96,6 @@
     "assists": null
   },
   {
-    "player": "Jamal Musiala",
-    "team": "Germany",
-    "goals": 1,
-    "assists": null
-  },
-  {
     "player": "John McGinn",
     "team": "Scotland",
     "goals": 1,
@@ -128,12 +134,6 @@
   {
     "player": "Nestor Irankunda",
     "team": "Australia",
-    "goals": 1,
-    "assists": null
-  },
-  {
-    "player": "Nico Schlotterbeck",
-    "team": "Germany",
     "goals": 1,
     "assists": null
   },
