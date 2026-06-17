@@ -292,9 +292,9 @@
     "group": "J",
     "home_team": "Austria",
     "away_team": "Jordan",
-    "home_score": null,
-    "away_score": null,
-    "status": "Scheduled",
+    "home_score": 3,
+    "away_score": 1,
+    "status": "Complete",
     "venue": "",
     "city": "",
     "country": ""
