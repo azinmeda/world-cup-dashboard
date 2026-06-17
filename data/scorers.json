@@ -24,6 +24,12 @@
     "assists": null
   },
   {
+    "player": "Harry Kane",
+    "team": "England",
+    "goals": 2,
+    "assists": null
+  },
+  {
     "player": "Kai Havertz",
     "team": "Germany",
     "goals": 2,
@@ -116,12 +122,6 @@
   {
     "player": "Ladislav Krejčí",
     "team": "Czechia",
-    "goals": 1,
-    "assists": null
-  },
-  {
-    "player": "Livano Comenencia",
-    "team": "Curaçao",
     "goals": 1,
     "assists": null
   },
