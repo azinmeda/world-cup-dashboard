@@ -6,6 +6,12 @@
     "assists": null
   },
   {
+    "player": "Cyle Larin",
+    "team": "Canada",
+    "goals": 2,
+    "assists": null
+  },
+  {
     "player": "Elijah Just",
     "team": "New Zealand",
     "goals": 2,
@@ -26,6 +32,18 @@
   {
     "player": "Harry Kane",
     "team": "England",
+    "goals": 2,
+    "assists": null
+  },
+  {
+    "player": "Johan Manzambi",
+    "team": "Switzerland",
+    "goals": 2,
+    "assists": null
+  },
+  {
+    "player": "Jonathan David",
+    "team": "Canada",
     "goals": 2,
     "assists": null
   },
@@ -57,25 +75,7 @@
     "player": "Breel Embolo",
     "team": "Switzerland",
     "goals": 1,
-    "assists": null
-  },
-  {
-    "player": "Connor Metcalfe",
-    "team": "Australia",
-    "goals": 1,
-    "assists": null
-  },
-  {
-    "player": "Cyle Larin",
-    "team": "Canada",
-    "goals": 1,
-    "assists": null
-  },
-  {
-    "player": "Felix Kalu Nmecha",
-    "team": "Germany",
-    "goals": 1,
-    "assists": null
+    "assists": 1
   },
   {
     "player": "Gio Reyna",

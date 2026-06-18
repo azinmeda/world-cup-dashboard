@@ -382,9 +382,9 @@
     "group": "B",
     "home_team": "Switzerland",
     "away_team": "Bosnia-Herzegovina",
-    "home_score": null,
-    "away_score": null,
-    "status": "Scheduled",
+    "home_score": 4,
+    "away_score": 1,
+    "status": "Complete",
     "venue": "",
     "city": "",
     "country": ""
