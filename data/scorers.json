@@ -1,5 +1,11 @@
 [
   {
+    "player": "Jonathan David",
+    "team": "Canada",
+    "goals": 3,
+    "assists": null
+  },
+  {
     "player": "Lionel Messi",
     "team": "Argentina",
     "goals": 3,
@@ -38,12 +44,6 @@
   {
     "player": "Johan Manzambi",
     "team": "Switzerland",
-    "goals": 2,
-    "assists": null
-  },
-  {
-    "player": "Jonathan David",
-    "team": "Canada",
     "goals": 2,
     "assists": null
   },
