@@ -18,6 +18,12 @@
     "assists": null
   },
   {
+    "player": "Cody Gakpo",
+    "team": "Netherlands",
+    "goals": 2,
+    "assists": 2
+  },
+  {
     "player": "Cyle Larin",
     "team": "Canada",
     "goals": 2,
@@ -87,12 +93,6 @@
     "player": "Yasin Ayari",
     "team": "Sweden",
     "goals": 2,
-    "assists": null
-  },
-  {
-    "player": "Boualem Khoukhi",
-    "team": "Qatar",
-    "goals": 1,
     "assists": null
   },
   {

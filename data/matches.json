@@ -487,9 +487,9 @@
     "group": "F",
     "home_team": "Netherlands",
     "away_team": "Sweden",
-    "home_score": null,
-    "away_score": null,
-    "status": "Scheduled",
+    "home_score": 5,
+    "away_score": 1,
+    "status": "Complete",
     "venue": "",
     "city": "",
     "country": ""
