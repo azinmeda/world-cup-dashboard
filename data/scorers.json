@@ -1,5 +1,11 @@
 [
   {
+    "player": "Deniz Undav",
+    "team": "Germany",
+    "goals": 3,
+    "assists": 2
+  },
+  {
     "player": "Jonathan David",
     "team": "Canada",
     "goals": 3,
@@ -94,12 +100,6 @@
     "team": "Sweden",
     "goals": 2,
     "assists": null
-  },
-  {
-    "player": "Breel Embolo",
-    "team": "Switzerland",
-    "goals": 1,
-    "assists": 1
   },
   {
     "player": "Gio Reyna",

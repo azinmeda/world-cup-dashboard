@@ -502,9 +502,9 @@
     "group": "E",
     "home_team": "Germany",
     "away_team": "Ivory Coast",
-    "home_score": null,
-    "away_score": null,
-    "status": "Scheduled",
+    "home_score": 2,
+    "away_score": 1,
+    "status": "Complete",
     "venue": "",
     "city": "",
     "country": ""
