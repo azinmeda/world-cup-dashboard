@@ -102,6 +102,12 @@
     "assists": null
   },
   {
+    "player": "Maximiliano Araújo",
+    "team": "Uruguay",
+    "goals": 2,
+    "assists": 1
+  },
+  {
     "player": "Mikel Oyarzabal",
     "team": "Spain",
     "goals": 2,
@@ -117,12 +123,6 @@
     "player": "Yasin Ayari",
     "team": "Sweden",
     "goals": 2,
-    "assists": null
-  },
-  {
-    "player": "Hyun-Gyu Oh",
-    "team": "South Korea",
-    "goals": 1,
     "assists": null
   },
   {
