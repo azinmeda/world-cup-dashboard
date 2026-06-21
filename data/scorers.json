@@ -18,6 +18,12 @@
     "assists": null
   },
   {
+    "player": "Ayase Ueda",
+    "team": "Japan",
+    "goals": 2,
+    "assists": 1
+  },
+  {
     "player": "Brian Brobbey",
     "team": "Netherlands",
     "goals": 2,
@@ -32,6 +38,12 @@
   {
     "player": "Cyle Larin",
     "team": "Canada",
+    "goals": 2,
+    "assists": null
+  },
+  {
+    "player": "Daichi Kamada",
+    "team": "Japan",
     "goals": 2,
     "assists": null
   },
@@ -102,12 +114,6 @@
     "assists": null
   },
   {
-    "player": "Gio Reyna",
-    "team": "United States",
-    "goals": 1,
-    "assists": null
-  },
-  {
     "player": "Hyun-Gyu Oh",
     "team": "South Korea",
     "goals": 1,
@@ -134,12 +140,6 @@
   {
     "player": "Ladislav Krejčí",
     "team": "Czechia",
-    "goals": 1,
-    "assists": null
-  },
-  {
-    "player": "Mauricio",
-    "team": "Paraguay",
     "goals": 1,
     "assists": null
   },
