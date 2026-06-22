@@ -18,6 +18,12 @@
     "assists": null
   },
   {
+    "player": "Kylian Mbappé",
+    "team": "France",
+    "goals": 3,
+    "assists": null
+  },
+  {
     "player": "Ayase Ueda",
     "team": "Japan",
     "goals": 2,
@@ -86,12 +92,6 @@
   {
     "player": "Kai Havertz",
     "team": "Germany",
-    "goals": 2,
-    "assists": null
-  },
-  {
-    "player": "Kylian Mbappé",
-    "team": "France",
     "goals": 2,
     "assists": null
   },
