@@ -1,5 +1,11 @@
 [
   {
+    "player": "Lionel Messi",
+    "team": "Argentina",
+    "goals": 5,
+    "assists": null
+  },
+  {
     "player": "Deniz Undav",
     "team": "Germany",
     "goals": 3,
@@ -8,12 +14,6 @@
   {
     "player": "Jonathan David",
     "team": "Canada",
-    "goals": 3,
-    "assists": null
-  },
-  {
-    "player": "Lionel Messi",
-    "team": "Argentina",
     "goals": 3,
     "assists": null
   },
