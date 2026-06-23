@@ -6,6 +6,18 @@
     "assists": null
   },
   {
+    "player": "Erling Haaland",
+    "team": "Norway",
+    "goals": 4,
+    "assists": null
+  },
+  {
+    "player": "Kylian Mbappé",
+    "team": "France",
+    "goals": 4,
+    "assists": null
+  },
+  {
     "player": "Deniz Undav",
     "team": "Germany",
     "goals": 3,
@@ -14,12 +26,6 @@
   {
     "player": "Jonathan David",
     "team": "Canada",
-    "goals": 3,
-    "assists": null
-  },
-  {
-    "player": "Kylian Mbappé",
-    "team": "France",
     "goals": 3,
     "assists": null
   },
@@ -60,12 +66,6 @@
     "assists": null
   },
   {
-    "player": "Erling Haaland",
-    "team": "Norway",
-    "goals": 2,
-    "assists": null
-  },
-  {
     "player": "Folarin Balogun",
     "team": "United States",
     "goals": 2,
@@ -80,6 +80,12 @@
   {
     "player": "Ismael Saibari",
     "team": "Morocco",
+    "goals": 2,
+    "assists": null
+  },
+  {
+    "player": "Ismaïla Sarr",
+    "team": "Senegal",
     "goals": 2,
     "assists": null
   },
@@ -124,12 +130,6 @@
     "team": "Sweden",
     "goals": 2,
     "assists": null
-  },
-  {
-    "player": "In-beom Hwang",
-    "team": "South Korea",
-    "goals": 1,
-    "assists": 1
   },
   {
     "player": "Julián Quiñones",
