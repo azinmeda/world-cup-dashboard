@@ -682,9 +682,9 @@
     "group": "L",
     "home_team": "England",
     "away_team": "Ghana",
-    "home_score": null,
-    "away_score": null,
-    "status": "Scheduled",
+    "home_score": 0,
+    "away_score": 0,
+    "status": "Complete",
     "venue": "",
     "city": "",
     "country": ""
