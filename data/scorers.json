@@ -24,6 +24,12 @@
     "assists": 2
   },
   {
+    "player": "Johan Manzambi",
+    "team": "Switzerland",
+    "goals": 3,
+    "assists": 1
+  },
+  {
     "player": "Jonathan David",
     "team": "Canada",
     "goals": 3,
@@ -46,12 +52,6 @@
     "team": "Netherlands",
     "goals": 2,
     "assists": 1
-  },
-  {
-    "player": "Cristiano Ronaldo",
-    "team": "Portugal",
-    "goals": 2,
-    "assists": null
   },
   {
     "player": "Crysencio Summerville",
@@ -84,6 +84,12 @@
     "assists": null
   },
   {
+    "player": "Ermin Mahmic",
+    "team": "Bosnia-Herzegovina",
+    "goals": 2,
+    "assists": null
+  },
+  {
     "player": "Folarin Balogun",
     "team": "United States",
     "goals": 2,
@@ -98,18 +104,6 @@
   {
     "player": "Ismael Saibari",
     "team": "Morocco",
-    "goals": 2,
-    "assists": null
-  },
-  {
-    "player": "Ismaïla Sarr",
-    "team": "Senegal",
-    "goals": 2,
-    "assists": null
-  },
-  {
-    "player": "Johan Manzambi",
-    "team": "Switzerland",
     "goals": 2,
     "assists": null
   },
@@ -134,6 +128,12 @@
   {
     "player": "Mikel Oyarzabal",
     "team": "Spain",
+    "goals": 2,
+    "assists": 1
+  },
+  {
+    "player": "Ruben Vargas",
+    "team": "Switzerland",
     "goals": 2,
     "assists": 1
   },
