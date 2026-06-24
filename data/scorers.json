@@ -18,10 +18,22 @@
     "assists": null
   },
   {
+    "player": "Vinicius Junior",
+    "team": "Brazil",
+    "goals": 4,
+    "assists": 1
+  },
+  {
     "player": "Deniz Undav",
     "team": "Germany",
     "goals": 3,
     "assists": 2
+  },
+  {
+    "player": "Ismael Saibari",
+    "team": "Morocco",
+    "goals": 3,
+    "assists": null
   },
   {
     "player": "Johan Manzambi",
@@ -102,12 +114,6 @@
     "assists": null
   },
   {
-    "player": "Ismael Saibari",
-    "team": "Morocco",
-    "goals": 2,
-    "assists": null
-  },
-  {
     "player": "Kai Havertz",
     "team": "Germany",
     "goals": 2,
@@ -134,12 +140,6 @@
   {
     "player": "Ruben Vargas",
     "team": "Switzerland",
-    "goals": 2,
-    "assists": 1
-  },
-  {
-    "player": "Vinicius Junior",
-    "team": "Brazil",
     "goals": 2,
     "assists": 1
   },
