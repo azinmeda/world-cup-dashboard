@@ -72,6 +72,12 @@
     "assists": null
   },
   {
+    "player": "Daniel Muñoz",
+    "team": "Colombia",
+    "goals": 2,
+    "assists": null
+  },
+  {
     "player": "Elijah Just",
     "team": "New Zealand",
     "goals": 2,
@@ -141,12 +147,6 @@
     "player": "Yasin Ayari",
     "team": "Sweden",
     "goals": 2,
-    "assists": null
-  },
-  {
-    "player": "Julián Quiñones",
-    "team": "Mexico",
-    "goals": 1,
     "assists": null
   }
 ]
