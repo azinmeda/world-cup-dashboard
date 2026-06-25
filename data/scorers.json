@@ -48,6 +48,12 @@
     "assists": null
   },
   {
+    "player": "Matheus Cunha",
+    "team": "Brazil",
+    "goals": 3,
+    "assists": null
+  },
+  {
     "player": "Ayase Ueda",
     "team": "Japan",
     "goals": 2,
@@ -114,26 +120,20 @@
     "assists": null
   },
   {
+    "player": "Julián Quiñones",
+    "team": "Mexico",
+    "goals": 2,
+    "assists": null
+  },
+  {
     "player": "Kai Havertz",
     "team": "Germany",
     "goals": 2,
     "assists": null
   },
   {
-    "player": "Matheus Cunha",
-    "team": "Brazil",
-    "goals": 2,
-    "assists": null
-  },
-  {
     "player": "Maximiliano Araújo",
     "team": "Uruguay",
-    "goals": 2,
-    "assists": 1
-  },
-  {
-    "player": "Mikel Oyarzabal",
-    "team": "Spain",
     "goals": 2,
     "assists": 1
   },
