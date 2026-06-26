@@ -15,7 +15,13 @@
     "player": "Kylian Mbappé",
     "team": "France",
     "goals": 4,
-    "assists": null
+    "assists": 2
+  },
+  {
+    "player": "Ousmane Dembélé",
+    "team": "France",
+    "goals": 4,
+    "assists": 1
   },
   {
     "player": "Vinicius Junior",
@@ -57,12 +63,6 @@
     "player": "Matheus Cunha",
     "team": "Brazil",
     "goals": 3,
-    "assists": null
-  },
-  {
-    "player": "Anthony Elanga",
-    "team": "Sweden",
-    "goals": 2,
     "assists": null
   },
   {
