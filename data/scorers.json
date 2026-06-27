@@ -48,6 +48,12 @@
     "assists": null
   },
   {
+    "player": "Harry Kane",
+    "team": "England",
+    "goals": 3,
+    "assists": null
+  },
+  {
     "player": "Ismael Saibari",
     "team": "Morocco",
     "goals": 3,
@@ -108,10 +114,10 @@
     "assists": null
   },
   {
-    "player": "Harry Kane",
+    "player": "Jude Bellingham",
     "team": "England",
     "goals": 2,
-    "assists": null
+    "assists": 1
   },
   {
     "player": "Julián Quiñones",
@@ -134,12 +140,6 @@
   {
     "player": "Ramin Rezaeian",
     "team": "Iran",
-    "goals": 2,
-    "assists": 1
-  },
-  {
-    "player": "Ruben Vargas",
-    "team": "Switzerland",
     "goals": 2,
     "assists": 1
   },
