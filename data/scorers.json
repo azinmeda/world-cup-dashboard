@@ -42,6 +42,12 @@
     "assists": 2
   },
   {
+    "player": "Elijah Just",
+    "team": "New Zealand",
+    "goals": 3,
+    "assists": null
+  },
+  {
     "player": "Ismael Saibari",
     "team": "Morocco",
     "goals": 3,
@@ -96,18 +102,6 @@
     "assists": null
   },
   {
-    "player": "Elijah Just",
-    "team": "New Zealand",
-    "goals": 2,
-    "assists": null
-  },
-  {
-    "player": "Ermin Mahmic",
-    "team": "Bosnia-Herzegovina",
-    "goals": 2,
-    "assists": null
-  },
-  {
     "player": "Folarin Balogun",
     "team": "United States",
     "goals": 2,
@@ -134,6 +128,12 @@
   {
     "player": "Maximiliano Araújo",
     "team": "Uruguay",
+    "goals": 2,
+    "assists": 1
+  },
+  {
+    "player": "Ramin Rezaeian",
+    "team": "Iran",
     "goals": 2,
     "assists": 1
   },
