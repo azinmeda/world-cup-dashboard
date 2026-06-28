@@ -1087,9 +1087,9 @@
     "group": "",
     "home_team": "South Africa",
     "away_team": "Canada",
-    "home_score": null,
-    "away_score": null,
-    "status": "Scheduled",
+    "home_score": 0,
+    "away_score": 1,
+    "status": "Complete",
     "venue": "",
     "city": "",
     "country": ""
