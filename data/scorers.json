@@ -84,6 +84,12 @@
     "assists": null
   },
   {
+    "player": "Yoane Wissa",
+    "team": "Congo DR",
+    "goals": 3,
+    "assists": null
+  },
+  {
     "player": "Crysencio Summerville",
     "team": "Netherlands",
     "goals": 2,
@@ -102,22 +108,10 @@
     "assists": null
   },
   {
-    "player": "Daniel Muñoz",
-    "team": "Colombia",
-    "goals": 2,
-    "assists": null
-  },
-  {
     "player": "Folarin Balogun",
     "team": "United States",
     "goals": 2,
     "assists": null
-  },
-  {
-    "player": "Jude Bellingham",
-    "team": "England",
-    "goals": 2,
-    "assists": 1
   },
   {
     "player": "Julián Quiñones",
@@ -128,6 +122,12 @@
   {
     "player": "Kai Havertz",
     "team": "Germany",
+    "goals": 2,
+    "assists": null
+  },
+  {
+    "player": "Marko Arnautovic",
+    "team": "Austria",
     "goals": 2,
     "assists": null
   },
