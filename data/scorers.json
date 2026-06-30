@@ -8,7 +8,7 @@
   {
     "player": "Erling Haaland",
     "team": "Norway",
-    "goals": 4,
+    "goals": 5,
     "assists": null
   },
   {
@@ -102,6 +102,12 @@
     "assists": null
   },
   {
+    "player": "Amad Diallo",
+    "team": "Ivory Coast",
+    "goals": 2,
+    "assists": null
+  },
+  {
     "player": "Crysencio Summerville",
     "team": "Netherlands",
     "goals": 2,
@@ -134,12 +140,6 @@
   {
     "player": "Maximiliano Araújo",
     "team": "Uruguay",
-    "goals": 2,
-    "assists": 1
-  },
-  {
-    "player": "Ramin Rezaeian",
-    "team": "Iran",
     "goals": 2,
     "assists": 1
   },
