@@ -1117,9 +1117,9 @@
     "group": "",
     "home_team": "Germany",
     "away_team": "Paraguay",
-    "home_score": null,
-    "away_score": null,
-    "status": "Scheduled",
+    "home_score": 4,
+    "away_score": 5,
+    "status": "Complete",
     "venue": "",
     "city": "",
     "country": ""
