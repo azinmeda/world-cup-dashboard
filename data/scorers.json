@@ -18,6 +18,12 @@
     "assists": null
   },
   {
+    "player": "Harry Kane",
+    "team": "England",
+    "goals": 5,
+    "assists": null
+  },
+  {
     "player": "Ousmane Dembélé",
     "team": "France",
     "goals": 4,
@@ -50,12 +56,6 @@
   {
     "player": "Elijah Just",
     "team": "New Zealand",
-    "goals": 3,
-    "assists": null
-  },
-  {
-    "player": "Harry Kane",
-    "team": "England",
     "goals": 3,
     "assists": null
   },
