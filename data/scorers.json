@@ -30,6 +30,12 @@
     "assists": 1
   },
   {
+    "player": "Mikel Oyarzabal",
+    "team": "Spain",
+    "goals": 4,
+    "assists": 1
+  },
+  {
     "player": "Ousmane Dembélé",
     "team": "France",
     "goals": 4,
@@ -140,12 +146,6 @@
   {
     "player": "Raúl Jiménez",
     "team": "Mexico",
-    "goals": 2,
-    "assists": null
-  },
-  {
-    "player": "Yasin Ayari",
-    "team": "Sweden",
     "goals": 2,
     "assists": null
   }
