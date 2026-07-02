@@ -66,6 +66,12 @@
     "assists": null
   },
   {
+    "player": "Folarin Balogun",
+    "team": "United States",
+    "goals": 3,
+    "assists": null
+  },
+  {
     "player": "Ismael Saibari",
     "team": "Morocco",
     "goals": 3,
@@ -128,12 +134,6 @@
   {
     "player": "Daichi Kamada",
     "team": "Japan",
-    "goals": 2,
-    "assists": null
-  },
-  {
-    "player": "Folarin Balogun",
-    "team": "United States",
     "goals": 2,
     "assists": null
   },
