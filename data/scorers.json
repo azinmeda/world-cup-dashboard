@@ -60,6 +60,12 @@
     "assists": 1
   },
   {
+    "player": "Cristiano Ronaldo",
+    "team": "Portugal",
+    "goals": 3,
+    "assists": null
+  },
+  {
     "player": "Deniz Undav",
     "team": "Germany",
     "goals": 3,
@@ -117,12 +123,6 @@
     "player": "Yoane Wissa",
     "team": "Congo DR",
     "goals": 3,
-    "assists": null
-  },
-  {
-    "player": "Amad Diallo",
-    "team": "Ivory Coast",
-    "goals": 2,
     "assists": null
   },
   {
