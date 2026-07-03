@@ -93,7 +93,7 @@
     "player": "Johan Manzambi",
     "team": "Switzerland",
     "goals": 3,
-    "assists": 1
+    "assists": 2
   },
   {
     "player": "Jonathan David",
@@ -126,6 +126,12 @@
     "assists": null
   },
   {
+    "player": "Breel Embolo",
+    "team": "Switzerland",
+    "goals": 2,
+    "assists": 2
+  },
+  {
     "player": "Crysencio Summerville",
     "team": "Netherlands",
     "goals": 2,
@@ -134,12 +140,6 @@
   {
     "player": "Cyle Larin",
     "team": "Canada",
-    "goals": 2,
-    "assists": null
-  },
-  {
-    "player": "Daichi Kamada",
-    "team": "Japan",
     "goals": 2,
     "assists": null
   },
