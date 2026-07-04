@@ -1,15 +1,15 @@
 [
   {
+    "player": "Kylian Mbappé",
+    "team": "France",
+    "goals": 7,
+    "assists": 2
+  },
+  {
     "player": "Lionel Messi",
     "team": "Argentina",
     "goals": 7,
     "assists": null
-  },
-  {
-    "player": "Kylian Mbappé",
-    "team": "France",
-    "goals": 6,
-    "assists": 2
   },
   {
     "player": "Erling Haaland",
