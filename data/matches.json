@@ -1342,9 +1342,9 @@
     "group": "",
     "home_team": "Paraguay",
     "away_team": "France",
-    "home_score": null,
-    "away_score": null,
-    "status": "Scheduled",
+    "home_score": 0,
+    "away_score": 1,
+    "status": "Complete",
     "venue": "",
     "city": "",
     "country": ""
