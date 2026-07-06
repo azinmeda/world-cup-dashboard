@@ -1387,9 +1387,9 @@
     "group": "",
     "home_team": "Portugal",
     "away_team": "Spain",
-    "home_score": null,
-    "away_score": null,
-    "status": "Scheduled",
+    "home_score": 0,
+    "away_score": 1,
+    "status": "Complete",
     "venue": "",
     "city": "",
     "country": ""
