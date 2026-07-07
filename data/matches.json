@@ -1432,9 +1432,9 @@
     "group": "",
     "home_team": "Switzerland",
     "away_team": "Colombia",
-    "home_score": null,
-    "away_score": null,
-    "status": "Scheduled",
+    "home_score": 4,
+    "away_score": 3,
+    "status": "Complete",
     "venue": "",
     "city": "",
     "country": ""
