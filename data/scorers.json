@@ -1,5 +1,11 @@
 [
   {
+    "player": "Kylian Mbappé",
+    "team": "France",
+    "goals": 8,
+    "assists": 2
+  },
+  {
     "player": "Lionel Messi",
     "team": "Argentina",
     "goals": 8,
@@ -12,16 +18,16 @@
     "assists": null
   },
   {
-    "player": "Kylian Mbappé",
-    "team": "France",
-    "goals": 7,
-    "assists": 2
-  },
-  {
     "player": "Harry Kane",
     "team": "England",
     "goals": 6,
     "assists": 1
+  },
+  {
+    "player": "Ousmane Dembélé",
+    "team": "France",
+    "goals": 5,
+    "assists": 2
   },
   {
     "player": "Ismaïla Sarr",
@@ -46,12 +52,6 @@
     "team": "Spain",
     "goals": 4,
     "assists": 1
-  },
-  {
-    "player": "Ousmane Dembélé",
-    "team": "France",
-    "goals": 4,
-    "assists": 2
   },
   {
     "player": "Vinicius Junior",
