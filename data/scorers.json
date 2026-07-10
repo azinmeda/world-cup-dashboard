@@ -66,6 +66,12 @@
     "assists": null
   },
   {
+    "player": "Charles De Ketelaere",
+    "team": "Belgium",
+    "goals": 3,
+    "assists": 1
+  },
+  {
     "player": "Cody Gakpo",
     "team": "Netherlands",
     "goals": 3,
@@ -141,12 +147,6 @@
     "player": "Yoane Wissa",
     "team": "Congo DR",
     "goals": 3,
-    "assists": null
-  },
-  {
-    "player": "Cyle Larin",
-    "team": "Canada",
-    "goals": 2,
     "assists": null
   }
 ]
