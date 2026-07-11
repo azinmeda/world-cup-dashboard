@@ -1372,9 +1372,9 @@
     "group": "",
     "home_team": "Mexico",
     "away_team": "England",
-    "home_score": 2,
-    "away_score": 3,
-    "status": "Complete",
+    "home_score": null,
+    "away_score": null,
+    "status": "Scheduled",
     "venue": "",
     "city": "",
     "country": ""
