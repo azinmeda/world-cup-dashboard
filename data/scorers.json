@@ -30,6 +30,12 @@
     "assists": 1
   },
   {
+    "player": "Mikel Oyarzabal",
+    "team": "Spain",
+    "goals": 5,
+    "assists": 1
+  },
+  {
     "player": "Ousmane Dembélé",
     "team": "France",
     "goals": 5,
@@ -44,12 +50,6 @@
   {
     "player": "Julián Quiñones",
     "team": "Mexico",
-    "goals": 4,
-    "assists": 1
-  },
-  {
-    "player": "Mikel Oyarzabal",
-    "team": "Spain",
     "goals": 4,
     "assists": 1
   },
