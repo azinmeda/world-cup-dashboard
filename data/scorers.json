@@ -9,7 +9,7 @@
     "player": "Lionel Messi",
     "team": "Argentina",
     "goals": 8,
-    "assists": 2
+    "assists": 3
   },
   {
     "player": "Erling Haaland",
@@ -66,12 +66,6 @@
     "assists": null
   },
   {
-    "player": "Charles De Ketelaere",
-    "team": "Belgium",
-    "goals": 3,
-    "assists": 1
-  },
-  {
     "player": "Cody Gakpo",
     "team": "Netherlands",
     "goals": 3,
@@ -124,6 +118,12 @@
     "team": "Germany",
     "goals": 3,
     "assists": null
+  },
+  {
+    "player": "Lautaro Martínez",
+    "team": "Argentina",
+    "goals": 3,
+    "assists": 1
   },
   {
     "player": "Matheus Cunha",
