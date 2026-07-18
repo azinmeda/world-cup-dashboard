@@ -2,8 +2,8 @@
   {
     "player": "Kylian Mbappé",
     "team": "France",
-    "goals": 8,
-    "assists": 3
+    "goals": 10,
+    "assists": 4
   },
   {
     "player": "Lionel Messi",
@@ -57,6 +57,12 @@
     "player": "Vinicius Junior",
     "team": "Brazil",
     "goals": 4,
+    "assists": 1
+  },
+  {
+    "player": "Bradley Barcola",
+    "team": "France",
+    "goals": 3,
     "assists": 1
   },
   {
@@ -118,12 +124,6 @@
     "team": "Germany",
     "goals": 3,
     "assists": null
-  },
-  {
-    "player": "Lautaro Martínez",
-    "team": "Argentina",
-    "goals": 3,
-    "assists": 1
   },
   {
     "player": "Matheus Cunha",
