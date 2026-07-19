@@ -18,28 +18,28 @@
     "assists": null
   },
   {
+    "player": "Jude Bellingham",
+    "team": "England",
+    "goals": 7,
+    "assists": 1
+  },
+  {
     "player": "Harry Kane",
     "team": "England",
     "goals": 6,
     "assists": 1
   },
   {
-    "player": "Jude Bellingham",
-    "team": "England",
+    "player": "Ousmane Dembélé",
+    "team": "France",
     "goals": 6,
-    "assists": 1
+    "assists": 2
   },
   {
     "player": "Mikel Oyarzabal",
     "team": "Spain",
     "goals": 5,
     "assists": 1
-  },
-  {
-    "player": "Ousmane Dembélé",
-    "team": "France",
-    "goals": 5,
-    "assists": 2
   },
   {
     "player": "Ismaïla Sarr",
